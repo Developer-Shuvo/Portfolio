@@ -1,4 +1,5 @@
-import Navbar from "./assets/Components/Navbar";
+import Hero from "./assets/Components/Hero/Hero";
+import Navbar from "./assets/Components/Navbar/Navbar";
 
 function App() {
   return (
@@ -11,7 +12,9 @@ function App() {
       {/* Main Content */}
       <div className="container mx-auto px-8">
         <Navbar />
-        {/* Your other content here */}
+        {/* MY other content here */}
+        {/* Hero Section */}
+        <Hero/>
       </div>
     </div>
   );
