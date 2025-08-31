@@ -25,51 +25,42 @@ const Navbar = () => {
         </a>
       </div>
 
-      <div className="mt-8 flex items-center justify-center gap-4 text-2xl">
-        {/* Github */}
+      <div className="mt-8 flex items-center justify-center gap-4 text-base text-stone-300 font-light">
+        {/* Intro*/}
         <a
           href="https://github.com/Developer-Shuvo"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="GitHub"
+          aria-label="Intro"
         >
-          <FaGithub />
+          Intro
         </a>
-        {/* Linked In */}
+        {/* About*/}
         <a
-          href="#"
+          href="https://github.com/Developer-Shuvo"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="LinkedIn"
+          aria-label="About"
         >
-          <FaLinkedin />
+          About
         </a>
-        {/* Instagram */}
+        {/* Works*/}
         <a
-          href="https://www.instagram.com/nazmul_hasan_shuvooo/"
+          href="https://github.com/Developer-Shuvo"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Instagram"
+          aria-label="Works"
         >
-          <FaInstagram />
+          Intro
         </a>
-        {/* Twitter */}
+        {/* Contact*/}
         <a
-          href="https://x.com/SHUVO_1010"
+          href="https://github.com/Developer-Shuvo"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Twitter"
+          aria-label="Contact"
         >
-          <FaTwitter />
-        </a>
-        {/* Facebook */}
-        <a
-          href="https://www.facebook.com/mdnazmul.hasanshuvo.5"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Facebook"
-        >
-          <FaFacebook />
+          Contact
         </a>
       </div>
     </nav>
