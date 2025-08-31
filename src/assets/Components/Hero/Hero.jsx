@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useCallback } from "react";
 import profilePic from "./shuvo.jpg";
 import {
   FaFacebook,
@@ -7,25 +7,79 @@ import {
   FaTwitter,
   FaChevronDown,
   FaLinkedin,
-} from "react-icons/fa"; // Added FaChevronDown, FaLinkedin
+} from "react-icons/fa";
 
-const Hero = () => {
+// CardTilt logic for profile image
+function throttle(func, delay) {
+  let lastCall = 0;
+  return (...args) => {
+    const now = new Date().getTime();
+    if (now - lastCall < delay) {
+      return;
+    }
+    lastCall = now;
+    return func(...args);
+  };
+}
+
+const ProfileImageTilt = () => {
+  const [rotate, setRotate] = useState({ x: 0, y: 0 });
+
+  const onMouseMove = useCallback(
+    throttle((e) => {
+      const card = e.currentTarget;
+      const box = card.getBoundingClientRect();
+      const x = e.clientX - box.left;
+      const y = e.clientY - box.top;
+      const centerX = box.width / 2;
+      const centerY = box.height / 2;
+      const rotateX = (y - centerY) / 4;
+      const rotateY = (centerX - x) / 4;
+
+      setRotate({ x: rotateX, y: rotateY });
+    }, 100),
+    []
+  );
+
+  const onMouseLeave = () => {
+    setRotate({ x: 0, y: 0 });
+  };
+
   return (
-    <div className="pb-4 lg:-mb-36 relative">
-      <div className="flex flex-wrap lg:flex-row-reverse">
-        {/*_______ Profile Image_______ */}
-        <div className="w-full lg:w-1/2 flex justify-center lg:p-8">
-          <div className="flex justify-center items-center">
-            <img
-              className="border border-stone-900 rounded-3xl object-contain 
+    <div
+      className="transition-[all_2000ms_cubic-bezier(0.03,0.98,0.52,0.99)_0s] will-change-transform"
+      onMouseMove={onMouseMove}
+      onMouseLeave={onMouseLeave}
+      style={{
+        transform: `perspective(1000px) rotateX(${rotate.x}deg) rotateY(${rotate.y}deg) scale3d(1, 1, 1)`,
+        transition: "all 5000ms cubic-bezier(0.03, 0.98, 0.52, 0.99) 0s",
+        display: "inline-block",
+      }}
+    >
+      <img
+        className="border border-stone-900 rounded-3xl object-contain 
                   w-36 h-36 
                   sm:w-[200px] sm:h-[220px] 
                   md:w-[280px] md:h-[320px] 
                   lg:w-[300px] lg:h-[320px] 
                   xl:w-[450px] xl:h-[550px]"
-              src={profilePic}
-              alt="Profile Pic Shuvo"
-            />
+        src={profilePic}
+        alt="Profile Pic Shuvo"
+        draggable={false}
+        style={{ userSelect: "none" }}
+      />
+    </div>
+  );
+};
+
+const Hero = () => {
+  return (
+    <div className="pb-4 lg:-mb-36 relative">
+      <div className="flex flex-wrap lg:flex-row-reverse">
+        {/*_______ Profile Image with Tilt Effect _______ */}
+        <div className="w-full lg:w-1/2 flex justify-center lg:p-8">
+          <div className="flex justify-center items-center">
+            <ProfileImageTilt />
           </div>
         </div>
 
