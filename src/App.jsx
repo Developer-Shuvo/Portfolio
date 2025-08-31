@@ -1,5 +1,6 @@
 import Hero from "./assets/Components/Hero/Hero";
 import Navbar from "./assets/Components/Navbar/Navbar";
+import Projects from "./assets/Components/Projects/Projects";
 import Technologies from "./assets/Components/Technologies/Technologies";
 
 function App() {
@@ -13,11 +14,12 @@ function App() {
       {/* Main Content */}
       <div className="container mx-auto px-8">
         <Navbar />
-        {/* MY other content here */}
-        {/* Hero Section */}
+
         <Hero />
-        {/* Technologies */}
+
         <Technologies />
+
+        <Projects/>
       </div>
     </div>
   );

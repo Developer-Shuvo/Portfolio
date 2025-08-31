@@ -61,8 +61,8 @@ const ProfileImageTilt = () => {
                   w-36 h-36 
                   sm:w-[200px] sm:h-[220px] 
                   md:w-[280px] md:h-[320px] 
-                  lg:w-[300px] lg:h-[320px] 
-                  xl:w-[450px] xl:h-[550px]"
+                  lg:w-[300px] lg:h-[400px] 
+                  xl:w-[450px] xl:h-[450px]"
         src={profilePic}
         alt="Profile Pic Shuvo"
         draggable={false}
@@ -153,7 +153,7 @@ const Hero = () => {
 
             {/* Title */}
             <span className="bg-gradient-to-r from-stone-300 to-stone-600 bg-clip-text text-3xl tracking-tight text-transparent ">
-              Front-End Developer
+             Front-End Developer 
             </span>
             {/* Description */}
             <p className="my-2 max-w-lg py-6 text-xl leading-relaxed tracking-tighter]">

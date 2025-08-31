@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./raviKumarLogo.webp";
+import logo from "./logo.png";
 import {
   FaFacebook,
   FaGithub,
@@ -17,15 +17,15 @@ const Navbar = () => {
         <a href="/" aria-label="Home ">
           <img
             src={logo}
-            className="mx-2"
-            width={50}
-            height={33}
+            className=""
+            width="100px"
+            height="80px"
             alt="portfolio logo"
           />
         </a>
       </div>
 
-      <div className="mt-8 flex items-center justify-center gap-4 text-base text-stone-300 font-light">
+      <div className="flex items-center justify-center gap-4 text-base text-stone-300 font-light">
         {/* Intro*/}
         <a
           href="https://github.com/Developer-Shuvo"
