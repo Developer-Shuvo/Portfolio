@@ -40,16 +40,28 @@ const Hero = () => {
               Tailwind CSS, and other cutting-edge web technologies.
             </p>
 
-            <a
-              href="/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              download
-              className="bg-white rounded p-4 text-sm text-stone-800 mb-10"
-            >
-              {" "}
-              Download Resume
-            </a>
+            <div className="flex flex-col md:flex-row items-center gap-0 sm:gap-0 md:gap-4 lg:gap-8">
+              {/* CV */}
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                download
+                className="border border-stone-300 flex items-center text-center p-4 text-sm md:text-base lg:text-lg text-stone-300 mb-10"
+              >
+                GET MY CV
+              </a>
+              {/* Get In Touch */}
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                download
+                className="border border-stone-300 flex items-center text-center p-4 text-sm md:text-base lg:text-lg text-stone-300 mb-10"
+              >
+                GET IN TOUCH
+              </a>
+            </div>
           </div>
         </div>
       </div>

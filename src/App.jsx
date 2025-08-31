@@ -1,5 +1,6 @@
 import Hero from "./assets/Components/Hero/Hero";
 import Navbar from "./assets/Components/Navbar/Navbar";
+import Technologies from "./assets/Components/Technologies/Technologies";
 
 function App() {
   return (
@@ -14,7 +15,9 @@ function App() {
         <Navbar />
         {/* MY other content here */}
         {/* Hero Section */}
-        <Hero/>
+        <Hero />
+        {/* Technologies */}
+        <Technologies />
       </div>
     </div>
   );
