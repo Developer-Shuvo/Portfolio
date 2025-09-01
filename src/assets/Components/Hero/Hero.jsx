@@ -153,7 +153,7 @@ const Hero = () => {
 
             {/* Title */}
             <span className="bg-gradient-to-r from-stone-300 to-stone-600 bg-clip-text text-3xl tracking-tight text-transparent ">
-             Front-End Developer 
+              Front-End Developer
             </span>
             {/* Description */}
             <p className="my-2 max-w-lg py-6 text-xl leading-relaxed tracking-tighter]">
@@ -180,7 +180,6 @@ const Hero = () => {
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
-                download
                 className="border border-stone-300 flex items-center text-center p-4 text-sm md:text-base lg:text-lg text-stone-300 mb-10"
               >
                 GET IN TOUCH

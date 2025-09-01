@@ -1,3 +1,4 @@
+import Experience from "./assets/Components/Experience/Experience";
 import Hero from "./assets/Components/Hero/Hero";
 import Navbar from "./assets/Components/Navbar/Navbar";
 import Projects from "./assets/Components/Projects/Projects";
@@ -19,7 +20,9 @@ function App() {
 
         <Technologies />
 
-        <Projects/>
+        <Projects />
+
+        <Experience />
       </div>
     </div>
   );
