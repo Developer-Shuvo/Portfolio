@@ -29,7 +29,7 @@
   height: 250px;
   transform-style: preserve-3d;
   transform: perspective(1200px);
-  animation: rotateSlider 20s linear infinite; /* ✅ Auto rotation added */
+  animation: autoRun 20s linear infinite; /* ✅ Auto rotation added */
 }
 
 .banner .slider .item {
@@ -40,9 +40,9 @@
   height: 250px;
   transform:
     rotateY(calc((var(--position) - 1) * (360deg / var(--quantity))))
-    translateZ(420px); /* ✅ Adjusted for perfect 3D spacing */
+    translateZ(450px); /* ✅ Adjusted for perfect 3D spacing */
   transform-origin: center;
-  backface-visibility: hidden; /* ✅ Prevents images from overlapping */
+
   transition: transform 1s ease-in-out;
 }
 
@@ -55,16 +55,15 @@
 }
 
 /* ✅ Rotation Animation */
-@keyframes rotateSlider {
+@keyframes autoRun {
   from {
-    transform: perspective(1200px) rotateY(0deg);
+    transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
   }
   to {
-    transform: perspective(1200px) rotateY(360deg);
+    transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
   }
 }
 
 
 
-/* Now 3 Dimenstional Work */
 
