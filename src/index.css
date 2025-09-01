@@ -1,10 +1,8 @@
-
-
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Ubuntu:wght@400;500;700&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Asimovian&display=swap');
-:root{
+
+:root {
   font-family: "Inter","Asimovian", "sans-serif";
   background: #000000;
 }
@@ -32,7 +30,8 @@
   height: 250px;
   transform-style: preserve-3d;
   transform: perspective(1200px);
-  animation: autoRun 40s linear infinite; /* ✅ Auto rotation added */
+  animation: autoRun 50s linear infinite;
+  z-index: 2;
 }
 
 .banner .slider .item {
@@ -43,19 +42,15 @@
   height: 250px;
   transform:
     rotateY(calc((var(--position) - 1) * (360deg / var(--quantity))))
-    translateZ(450px); /* ✅ Adjusted for perfect 3D spacing */
+    translateZ(450px);
   transform-origin: center;
-
   transition: transform 1s ease-in-out;
-  
 }
 
 .banner .slider .item img {
   width: 100%;
   height: 100%;
- 
   object-fit: cover;
-  
 }
 
 /* ✅ Rotation Animation */
@@ -68,59 +63,249 @@
   }
 }
 
-
-/* My image with project Details name */
-.banner .content{
-   position: absolute;
-   bottom: 0;
-   left: 50%;
-   transform: translateX(-50%);
-   width: min(1400px, 100vw);
-   height:  max-content;
-   padding-bottom: 100px;
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: space-between;
-   align-items: center;
-
-}
-
-.banner .content h1{
-  font-family: 'Asimovian';
-  font-size: 16rem;
-  line-height: 1rem;
-  color: aliceblue;
-  position: relative;
-}
-.banner .content h1::after{
-position: absolute;
-inset: 0 0 0 0;
-content: attr(data-content); 
-}
-
-.banner .content h2{
-  font-size: 3rem;
-}
-
-.banner .content .author{
-  font-family: "Inter";
-  text-align: right;
-  max-width: 200px;
-}
-
-
-.banner .content .model{
-  background-image: url(./assets/Components//AnimationSlider/shuvo.jpg);
-  width: 100%;
-  height: 75vh;
+/* -------- My Image + My Work Text Inside Slider -------- */
+.banner .content {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  background-size: auto 130%;
-  background-repeat: no-repeat;
-  background-position: top-center;
+  bottom: 410px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(800px, 90vw);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 3;
 }
 
+/* My Work Text */
+.banner .content h1 {
+  font-family: 'Asimovian';
+  font-size: 8rem;
+  line-height: 1.2;
+  color: rgba(49, 2, 58, 0.687);
+  position: relative;
+  margin-bottom: 20px;
+}
 
+/* Text Outline Effect */
+.banner .content h1::after {
+  position: absolute;
+  inset: 0 0 0 0;
+  content: attr(data-content);
+  z-index: 2;
+  -webkit-text-stroke: 2px white;
+  color: transparent;
+}
 
+/* 3D Transparent Model Image */
+.banner .content .model {
+  background-image: url(./assets/Components/AnimationSlider/shuvo-bg-less.png);
+  width: 200px;
+  height: 200px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  position: relative;
+  z-index: 3;
 
+  /* ✅ Transparent glassy effect */
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+
+  /* ✅ 3D glowing border */
+  border: 2px solid white;
+
+  /* ✅ Inner + outer shadows for 3D look */
+  box-shadow:
+    inset 0 5px 15px rgba(229, 231, 196, 0.441),
+    inset 0 -5px 15px rgba(0, 0, 0, 0.4),
+    0 15px 30px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(214, 6, 162, 0.87);
+
+  /* ✅ Smooth animation on hover */
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+/* ✅ Hover 3D Zoom Effect */
+.banner .content .model:hover {
+  transform: scale(1.08) rotateX(8deg) rotateY(8deg);
+  box-shadow:
+    inset 0 5px 15px rgba(255, 255, 255, 0.4),
+    inset 0 -5px 15px rgba(0, 0, 0, 0.5),
+    0 20px 40px rgba(0, 0, 0, 0.6),
+    0 0 40px rgba(62, 234, 19, 1);
+}
+
+/* Hover Zoom Effect */
+.banner .content .model:hover {
+  transform: scale(1.08);
+}
+
+/* ------------------------------------------------------------------- */
+/* ------------------- RESPONSIVE DESIGN ---------------------------- */
+/* ------------------------------------------------------------------- */
+
+/* ✅ Extra Small Devices (Phones < 400px) */
+@media (max-width: 400px) {
+  .banner {
+    height: 90vh;
+    padding: 10px;
+  }
+
+  .banner .slider {
+    width: 130px;
+    height: 160px;
+  }
+
+  .banner .slider .item {
+    width: 130px;
+    height: 160px;
+    transform:
+      rotateY(calc((var(--position) - 1) * (360deg / var(--quantity))))
+      translateZ(220px);
+  }
+
+  .banner .content {
+    bottom: 340px;
+    width: 95%;
+  }
+
+  .banner .content h1 {
+    font-size: 3rem;
+  }
+
+  .banner .content .model {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* ✅ Small Devices (Mobiles & Small Tablets) */
+@media (min-width: 401px) and (max-width: 640px) {
+  .banner {
+    height: 95vh;
+    padding: 15px;
+  }
+
+  .banner .slider {
+    width: 150px;
+    height: 180px;
+  }
+
+  .banner .slider .item {
+    width: 150px;
+    height: 180px;
+    transform:
+      rotateY(calc((var(--position) - 1) * (360deg / var(--quantity))))
+      translateZ(260px);
+  }
+
+  .banner .content {
+    bottom: 350px;
+    width: 90%;
+  }
+
+  .banner .content h1 {
+    font-size: 3.8rem;
+  }
+
+  .banner .content .model {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* ✅ Medium Devices (Tablets & Small Laptops) */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .banner {
+    height: 95vh;
+    padding: 20px;
+  }
+
+  .banner .slider {
+    width: 170px;
+    height: 210px;
+  }
+
+  .banner .slider .item {
+    width: 170px;
+    height: 210px;
+    transform:
+      rotateY(calc((var(--position) - 1) * (360deg / var(--quantity))))
+      translateZ(350px);
+  }
+
+  .banner .content {
+    bottom: 220px;
+    width: 85%;
+  }
+
+  .banner .content h1 {
+    font-size: 5rem;
+  }
+
+  .banner .content .model {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* ✅ Large Devices (Laptops & Desktops) → KEEP SAME SIZE */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .banner .slider {
+    width: 200px;
+    height: 250px;
+  }
+
+  .banner .slider .item {
+    width: 200px;
+    height: 250px;
+    transform:
+      rotateY(calc((var(--position) - 1) * (360deg / var(--quantity))))
+      translateZ(450px);
+  }
+
+  .banner .content {
+    bottom: 380px;
+  }
+
+  .banner .content h1 {
+    font-size: 7rem;
+  }
+
+  .banner .content .model {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* ✅ Extra Large Devices (4K / Ultra-Wide) → KEEP SAME SIZE */
+@media (min-width: 1440px) {
+  .banner .slider {
+    width: 200px;
+    height: 250px;
+  }
+
+  .banner .slider .item {
+    width: 200px;
+    height: 250px;
+    transform:
+      rotateY(calc((var(--position) - 1) * (360deg / var(--quantity))))
+      translateZ(450px);
+  }
+
+  .banner .content {
+    bottom: 420px;
+  }
+
+  .banner .content h1 {
+    font-size: 8rem;
+  }
+
+  .banner .content .model {
+    width: 200px;
+    height: 200px;
+  }
+}
