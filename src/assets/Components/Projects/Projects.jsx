@@ -5,7 +5,7 @@ import { PROJECTS } from "../../../../constants";
 
 const Projects = () => {
   return (
-    <div className="p-4">
+    <div className="p-4 ">
       <h1 className="my-20 text-center text-4xl">Projects</h1>
 
       <div className="">

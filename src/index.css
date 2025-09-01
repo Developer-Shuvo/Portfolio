@@ -6,7 +6,65 @@
   background: #000000;
 }
 
-*borders {
-  border: 1px solid red;
+.borders {
+  border: 2px solid red;
 }
+
+/* -------- Animation Slider -------- */
+.banner {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner .slider {
+  position: relative;
+  width: 200px;
+  height: 250px;
+  transform-style: preserve-3d;
+  transform: perspective(1200px);
+  animation: rotateSlider 20s linear infinite; /* ✅ Auto rotation added */
+}
+
+.banner .slider .item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 250px;
+  transform:
+    rotateY(calc((var(--position) - 1) * (360deg / var(--quantity))))
+    translateZ(420px); /* ✅ Adjusted for perfect 3D spacing */
+  transform-origin: center;
+  backface-visibility: hidden; /* ✅ Prevents images from overlapping */
+  transition: transform 1s ease-in-out;
+}
+
+.banner .slider .item img {
+  width: 100%;
+  height: 100%;
+ 
+  object-fit: cover;
+  
+}
+
+/* ✅ Rotation Animation */
+@keyframes rotateSlider {
+  from {
+    transform: perspective(1200px) rotateY(0deg);
+  }
+  to {
+    transform: perspective(1200px) rotateY(360deg);
+  }
+}
+
+
+
+/* Now 3 Dimenstional Work */
 

@@ -147,7 +147,7 @@ const Hero = () => {
         <div className="w-full lg:w-1/2">
           <div className="flex flex-col items-center lg:items-start mt-10">
             {/* Name */}
-            <h1 className="pb-2 text-4xl tracking-tighter lg:text-6xl font-semibold">
+            <h1 className="name pb-2 text-4xl tracking-tighter lg:text-6xl font-semibold">
               SHUVO
             </h1>
 
