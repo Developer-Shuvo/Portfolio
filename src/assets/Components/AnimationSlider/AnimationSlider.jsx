@@ -11,37 +11,72 @@ import image9 from "./image9.jpg";
 const AnimationSlider = () => {
   return (
     <div className="mt-10  lg:mt-20 banner">
+      {/* Slider Section */}
       <div className="slider" style={{ "--quantity": 10 }}>
         <div className="item" style={{ "--position": 1 }}>
-          <img src={image1} alt="" />
+          <a href="#">
+            <img src={image1} alt="" />
+          </a>
         </div>
+
         <div className="item" style={{ "--position": 2 }}>
-          <img src={image2} alt="" />
+          <a href="#">
+            <img src={image2} alt="" />
+          </a>
         </div>
         <div className="item" style={{ "--position": 3 }}>
-          <img src={image3} alt="" />
+          <a href="#">
+            <img src={image3} alt="" />
+          </a>
         </div>
         <div className="item" style={{ "--position": 4 }}>
-          <img src={image4} alt="" />
+          <a href="#">
+            <img src={image4} alt="" />
+          </a>
         </div>
         <div className="item" style={{ "--position": 5 }}>
-          <img src={image5} alt="" />
+          <a href="#">
+            <img src={image5} alt="" />
+          </a>
         </div>
         <div className="item" style={{ "--position": 6 }}>
-          <img src={image6} alt="" />
+          <a href="#">
+            <img src={image6} alt="" />
+          </a>
         </div>
         <div className="item" style={{ "--position": 7 }}>
-          <img src={image7} alt="" />
+          <a href="#">
+            <img src={image7} alt="" />
+          </a>
         </div>
         <div className="item" style={{ "--position": 8 }}>
-          <img src={image8} alt="" />
+          <a href="#">
+            <img src={image8} alt="" />
+          </a>
         </div>
         <div className="item" style={{ "--position": 9 }}>
-          <img src={image9} alt="" />
+          <a href="#">
+            <img src={image9} alt="" />
+          </a>
         </div>
         <div className="item" style={{ "--position": 10 }}>
-          <img src={image4} alt="" />
+          <a href="#">
+            <img src={image4} alt="" />
+          </a>
         </div>
+      </div>
+
+      {/* Text & image Section */}
+      <div className="content">
+        <h1 data-content="SHUVO">SHUVO</h1>
+        <div className="author">
+          <h2>FrontEnd Developer</h2>
+          <p>
+            
+            <b>Here My Top Project</b>
+          </p>
+        </div>
+        <div className="model"></div>
       </div>
     </div>
   );
