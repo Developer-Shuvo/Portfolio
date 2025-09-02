@@ -1,4 +1,5 @@
 import AnimationSlider from "./assets/Components/AnimationSlider/AnimationSlider";
+import Contact from "./assets/Components/Contact/Contact";
 import Experience from "./assets/Components/Experience/Experience";
 import Hero from "./assets/Components/Hero/Hero";
 import Navbar from "./assets/Components/Navbar/Navbar";
@@ -26,6 +27,8 @@ function App() {
         <Projects />
 
         <Experience />
+
+        <Contact />
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 import React, { useState, useCallback } from "react";
 import profilePic from "./shuvo.jpg";
+import { motion } from "framer-motion";
 import {
   FaFacebook,
   FaGithub,
@@ -45,6 +46,9 @@ const ProfileImageTilt = () => {
     setRotate({ x: 0, y: 0 });
   };
 
+  // ✅ Define animation delay here
+  const h = 3;
+
   return (
     <div
       className="transition-[all_2000ms_cubic-bezier(0.03,0.98,0.52,0.99)_0s] will-change-transform"
@@ -56,13 +60,19 @@ const ProfileImageTilt = () => {
         display: "inline-block",
       }}
     >
-      <img
-        className="border border-stone-900 rounded-3xl object-contain 
-                  w-36 h-36 
-                  sm:w-[200px] sm:h-[220px] 
-                  md:w-[280px] md:h-[320px] 
-                  lg:w-[300px] lg:h-[400px] 
-                  xl:w-[450px] xl:h-[450px]"
+      {/* ✅ Framer Motion image with working animation */}
+      <motion.img
+        width={650}
+        height={650}
+        initial={{ x: 100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1, delay: h - 1.5 }}
+        className="border border-stone-900 rounded-3xl object-contain
+                   w-36 h-36 
+                   sm:w-[200px] sm:h-[220px] 
+                   md:w-[280px] md:h-[320px] 
+                   lg:w-[300px] lg:h-[400px] 
+                   xl:w-[450px] xl:h-[450px]"
         src={profilePic}
         alt="Profile Pic Shuvo"
         draggable={false}
@@ -70,6 +80,24 @@ const ProfileImageTilt = () => {
       />
     </div>
   );
+};
+
+// Framer Motion Variants
+const containerVariants = {
+  hidden: { opacity: 0, x: -100 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.5,
+      staggerChildren: 0.5,
+    },
+  },
+};
+
+const childVariants = {
+  hidden: { opacity: 0, x: -100 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
 };
 
 const Hero = () => {
@@ -85,7 +113,6 @@ const Hero = () => {
 
         {/*_______ Social Icons & Scroll Indicator _______ */}
         <div className="hidden lg:flex flex-col items-center gap-4 text-3xl absolute right-0 top-1/2 -translate-y-1/2 mr-8">
-          {/* Github */}
           <a
             href="https://github.com/Developer-Shuvo"
             target="_blank"
@@ -94,7 +121,6 @@ const Hero = () => {
           >
             <FaGithub />
           </a>
-          {/* LinkedIn */}
           <a
             href="#"
             target="_blank"
@@ -103,7 +129,6 @@ const Hero = () => {
           >
             <FaLinkedin />
           </a>
-          {/* Facebook */}
           <a
             href="https://www.facebook.com/mdnazmul.hasanshuvo.5"
             target="_blank"
@@ -112,7 +137,6 @@ const Hero = () => {
           >
             <FaFacebook />
           </a>
-          {/* Twitter */}
           <a
             href="https://x.com/SHUVO_1010"
             target="_blank"
@@ -121,7 +145,6 @@ const Hero = () => {
           >
             <FaTwitter />
           </a>
-          {/* Instagram */}
           <a
             href="https://www.instagram.com/nazmul_hasan_shuvooo/"
             target="_blank"
@@ -143,29 +166,22 @@ const Hero = () => {
           </a>
         </div>
 
-        {/*_______ Name, Title_______  */}
+        {/*_______ Name, Title_______ */}
         <div className="w-full lg:w-1/2">
-          <div className="flex flex-col items-center lg:items-start mt-10">
-            {/* Name */}
+          <motion.div className="flex flex-col items-center lg:items-start mt-10">
             <h1 className="name pb-2 text-4xl tracking-tighter lg:text-6xl font-semibold">
               SHUVO
             </h1>
-
-            {/* Title */}
             <span className="bg-gradient-to-r from-stone-300 to-stone-600 bg-clip-text text-3xl tracking-tight text-transparent ">
               Front-End Developer
             </span>
-            {/* Description */}
             <p className="my-2 max-w-lg py-6 text-xl leading-relaxed tracking-tighter]">
               It's me Shuvo, a passionate frontend developer dedicated to
               building modern, responsive, and user-friendly websites. I love
               turning ideas into interactive digital experiences using React,
               Tailwind CSS, and other cutting-edge web technologies.
             </p>
-
-            {/* Button */}
             <div className="flex flex-col md:flex-row items-center gap-0 sm:gap-0 md:gap-4 lg:gap-8">
-              {/* CV */}
               <a
                 href="/resume.pdf"
                 target="_blank"
@@ -175,7 +191,6 @@ const Hero = () => {
               >
                 GET MY CV
               </a>
-              {/* Get In Touch */}
               <a
                 href="#"
                 target="_blank"
@@ -185,7 +200,7 @@ const Hero = () => {
                 GET IN TOUCH
               </a>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
