@@ -1,12 +1,17 @@
-import React from "react";
+
 import { PROJECTS } from "../../../../constants";
 // Removed 'Technologies' as it was incorrectly imported and used
 // You should be using 'tech' from the map function
+import { motion } from "framer-motion";
 
 const Projects = () => {
   return (
     <div className="p-4 ">
-      <h1 className="my-20 text-center text-4xl">Projects</h1>
+      <motion.h1
+      whileInView={{opacity:1, y:0}}
+      initial= {{opacity:0, y: -100}}
+      transition= {{duration: 0.5}}
+      className="my-20 text-center text-4xl">Projects</motion.h1>
 
       <div className="">
         {PROJECTS.map(

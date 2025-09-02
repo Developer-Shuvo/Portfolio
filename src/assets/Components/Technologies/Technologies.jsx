@@ -1,4 +1,5 @@
-import React from "react";
+import { motion } from "framer-motion";
+
 import {
   RiCss3Fill,
   RiHtml5Fill,
@@ -11,54 +12,121 @@ import {
 } from "react-icons/ri";
 import { SiFigma, SiGithub, SiMongodb } from "react-icons/si";
 
+const iconVariants = (duration) => ({
+  inital: { y: -10 },
+  animate: {
+    y: [10, -10],
+    transition: {
+      duration: duration,
+      ease: "linear",
+      repeat: Infinity,
+      repeatType: "riverse",
+    },
+  },
+});
 const Technologies = () => {
   return (
+    // Technology Text
     <div className="pb-24 ">
-      <h1 className="my-20 text-center text-4xl">Technologies</h1>
+      <motion.h1
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: -100 }}
+        transition={{ duration: 1.5 }}
+        className="my-20 text-center text-4xl"
+      >
+        Technologies
+      </motion.h1>
 
       {/* Icons */}
-      <div className="flex flex-wrap items-center justify-center gap-4">
+      <motion.div
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: -100 }}
+        transition={{ duration: 1.5 }}
+        className="flex flex-wrap items-center justify-center gap-4"
+      >
         {/* Html */}
-        <div className="p4">
+        <motion.div
+          initial="initial"
+          animate="animate"
+          variants={iconVariants(2.5)}
+        >
           <RiHtml5Fill className="text-7xl text-orange-500" />
-        </div>
+        </motion.div>
         {/* CSS */}
-        <div className="p4">
+        <motion.div
+          initial="initial"
+          animate="animate"
+          variants={iconVariants(2)}
+          className="p4"
+        >
           <RiCss3Fill className="text-7xl text-sky-600" />
-        </div>
+        </motion.div>
         {/* JavaScript */}
-        <div className="p4">
+        <motion.div
+          initial="initial"
+          animate="animate"
+          variants={iconVariants(5)}
+          className="p4"
+        >
           <RiJavascriptFill className="text-7xl text-yellow-400" />
-        </div>
+        </motion.div>
         {/* React */}
-        <div>
+        <motion.div
+          initial="initial"
+          animate="animate"
+          variants={iconVariants(2)}
+        >
           <RiReactjsLine className="text-7xl text-cyan-400" />
-        </div>
+        </motion.div>
         {/* Next js */}
-        <div>
+        <motion.div
+          initial="initial"
+          animate="animate"
+          variants={iconVariants(6)}
+        >
           <RiNextjsLine className="text-7xl text-cyan-400" />
-        </div>
+        </motion.div>
         {/* Mongo DB */}
-        <div>
+        <motion.div
+          initial="initial"
+          animate="animate"
+          variants={iconVariants(4)}
+        >
           <RiTailwindCssFill className="text-7xl text-cyan-400" />
-        </div>
+        </motion.div>
         {/* Node js */}
-        <div>
+        <motion.div
+          initial="initial"
+          animate="animate"
+          variants={iconVariants(2)}
+        >
           <RiNodejsLine className="text-7xl text-cyan-400" />
-        </div>
+        </motion.div>
         {/* Mongo DB */}
-        <div>
+        <motion.div
+          initial="initial"
+          animate="animate"
+          variants={iconVariants(4)}
+        >
           <SiMongodb className="text-7xl text-cyan-400" />
-        </div>
+        </motion.div>
         {/* Github */}
-        <div>
+        <motion.div
+          initial="initial"
+          animate="animate"
+          variants={iconVariants(2)}
+        >
           <SiGithub className="text-7xl text-cyan-400" />
-        </div>
+        </motion.div>
         {/* Figma */}
-        <div>
+        <motion.div
+          initial="initial"
+          animate="animate"
+          variants={iconVariants(6)}
+        >
           <SiFigma className="text-7xl text-pink-500" />
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };
