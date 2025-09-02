@@ -2,7 +2,6 @@ import { PROJECTS } from "../../../../constants";
 
 import { motion } from "framer-motion";
 
-
 const Projects = () => {
   return (
     <div className="p-4 ">
@@ -23,7 +22,8 @@ const Projects = () => {
           ) => (
             <div
               key={index}
-              className="mb-8 border border-[#2f176f] border-0.5 p-4 flex flex-wrap lg:justify-center"
+              className="mb-8 
+               p-4 flex flex-wrap lg:justify-center"
             >
               {/* Project Image */}
               <motion.div
