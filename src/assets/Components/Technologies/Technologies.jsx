@@ -13,17 +13,17 @@ import {
 import { SiFigma, SiGithub, SiMongodb } from "react-icons/si";
 
 const iconVariants = (duration) => ({
-  inital: { y: -10 },
+  initial: { y: 0 },
   animate: {
-    y: [10, -10],
+    y: [0, -15, 0], // Smoothly goes up and comes down
     transition: {
       duration: duration,
-      ease: "linear",
+      ease: "easeInOut",
       repeat: Infinity,
-      repeatType: "riverse",
     },
   },
 });
+
 const Technologies = () => {
   return (
     // Technology Text
@@ -41,7 +41,7 @@ const Technologies = () => {
       <motion.div
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
-        transition={{ duration: 1.5 }}
+        transition={{ duration: 5 }}
         className="flex flex-wrap items-center justify-center gap-4"
       >
         {/* Html */}
@@ -65,7 +65,7 @@ const Technologies = () => {
         <motion.div
           initial="initial"
           animate="animate"
-          variants={iconVariants(5)}
+          variants={iconVariants(4)}
           className="p4"
         >
           <RiJavascriptFill className="text-7xl text-yellow-400" />
@@ -74,7 +74,7 @@ const Technologies = () => {
         <motion.div
           initial="initial"
           animate="animate"
-          variants={iconVariants(2)}
+          variants={iconVariants(3)}
         >
           <RiReactjsLine className="text-7xl text-cyan-400" />
         </motion.div>
@@ -82,7 +82,7 @@ const Technologies = () => {
         <motion.div
           initial="initial"
           animate="animate"
-          variants={iconVariants(6)}
+          variants={iconVariants(5)}
         >
           <RiNextjsLine className="text-7xl text-cyan-400" />
         </motion.div>
@@ -122,7 +122,7 @@ const Technologies = () => {
         <motion.div
           initial="initial"
           animate="animate"
-          variants={iconVariants(6)}
+          variants={iconVariants(3)}
         >
           <SiFigma className="text-7xl text-pink-500" />
         </motion.div>

@@ -1,7 +1,7 @@
 import { PROJECTS } from "../../../../constants";
-// Removed 'Technologies' as it was incorrectly imported and used
-// You should be using 'tech' from the map function
+
 import { motion } from "framer-motion";
+
 
 const Projects = () => {
   return (
