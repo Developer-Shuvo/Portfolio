@@ -168,21 +168,36 @@ const Hero = () => {
 
         {/*_______ Name, Title_______ */}
         <div className="w-full lg:w-1/2">
-          <motion.div className="flex flex-col items-center lg:items-start mt-10">
-            <h1 className="name pb-2 text-4xl tracking-tighter lg:text-6xl font-semibold">
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={containerVariants}
+            className="flex flex-col items-center lg:items-start mt-10"
+          >
+            <motion.h1
+              variants={childVariants}
+              className="name pb-2 text-4xl tracking-tighter lg:text-6xl font-semibold"
+            >
               SHUVO
-            </h1>
-            <span className="bg-gradient-to-r from-stone-300 to-stone-600 bg-clip-text text-3xl tracking-tight text-transparent ">
+            </motion.h1>
+            <motion.span
+              variants={childVariants}
+              className="bg-gradient-to-r from-stone-300 to-stone-600 bg-clip-text text-3xl tracking-tight text-transparent "
+            >
               Front-End Developer
-            </span>
-            <p className="my-2 max-w-lg py-6 text-xl leading-relaxed tracking-tighter]">
+            </motion.span>
+            <motion.p
+              variants={childVariants}
+              className="my-2 max-w-lg py-6 text-xl leading-relaxed tracking-tighter]"
+            >
               It's me Shuvo, a passionate frontend developer dedicated to
               building modern, responsive, and user-friendly websites. I love
               turning ideas into interactive digital experiences using React,
               Tailwind CSS, and other cutting-edge web technologies.
-            </p>
+            </motion.p>
             <div className="flex flex-col md:flex-row items-center gap-0 sm:gap-0 md:gap-4 lg:gap-8">
-              <a
+              <motion.a
+              variants={childVariants}
                 href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -190,15 +205,16 @@ const Hero = () => {
                 className="border border-stone-300 flex items-center text-center p-4 text-sm md:text-base lg:text-lg text-stone-300 mb-10"
               >
                 GET MY CV
-              </a>
-              <a
+              </motion.a>
+              <motion.a
+              variants={containerVariants}
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border border-stone-300 flex items-center text-center p-4 text-sm md:text-base lg:text-lg text-stone-300 mb-10"
               >
                 GET IN TOUCH
-              </a>
+              </motion.a>
             </div>
           </motion.div>
         </div>
