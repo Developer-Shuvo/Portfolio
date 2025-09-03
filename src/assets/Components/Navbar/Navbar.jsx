@@ -10,29 +10,11 @@ const Navbar = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const handleLinkClick = (e, href) => {
-    e.preventDefault();
-    // Corrected line: Add parentheses around `href`
-    const targetElement = document.querySelector(href);
-    if (targetElement) {
-      const offset = -85;
-      const elementPosition = targetElement.getBoundingClientRect().top;
-
-      const offsetPosition = elementPosition + window.scrollY + offset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
-    }
-
-    // Mobile MenuBar
-    setMobileMenuOpen(false);
-  };
+  console.log(isMobileMenuOpen, "mobile open");
 
   return (
     <div className="">
-      <nav className="fixed left-0 right-0  top-4 z-50">
+      <nav className="fixed left-0 right-0 top-4  z-50">
         {/* Navbar */}
         <div
           className="mx-auto hidden max-w-3xl items-center justify-center rounded-lg
@@ -49,11 +31,10 @@ const Navbar = () => {
             {/* links */}
             <div>
               <ul className="flex items-center gap-6">
-                <li>
+                <li onClick={() => toggleMobileMenu()}>
                   <a
                     className="text-md hover:text-yellow-400 ease-in-out duration-300"
                     href="#intro"
-                    onClick={"#"}
                   >
                     Intro
                   </a>
@@ -62,7 +43,7 @@ const Navbar = () => {
                   <a
                     className="text-md hover:text-yellow-400 ease-in-out duration-300"
                     href="#myWork"
-                    onClick={"#"}
+                   onClick={() => toggleMobileMenu()}
                   >
                     My Work
                   </a>
@@ -71,7 +52,7 @@ const Navbar = () => {
                   <a
                     className="text-md hover:text-yellow-400 ease-in-out duration-300"
                     href="#technologies"
-                    onClick={"#"}
+                   onClick={() => toggleMobileMenu()}
                   >
                     Technologies
                   </a>
@@ -80,7 +61,7 @@ const Navbar = () => {
                   <a
                     className="text-md hover:text-yellow-400 ease-in-out duration-300"
                     href="#projects"
-                    onClick={"#"}
+                   onClick={() => toggleMobileMenu()}
                   >
                     Projects
                   </a>
@@ -89,7 +70,7 @@ const Navbar = () => {
                   <a
                     className="text-md hover:text-yellow-400 ease-in-out duration-300"
                     href="#experience"
-                    onClick={"#"}
+                   onClick={() => toggleMobileMenu()}
                   >
                     Experience
                   </a>
@@ -98,7 +79,7 @@ const Navbar = () => {
                   <a
                     className="text-md hover:text-yellow-400 ease-in-out duration-300"
                     href="#contact"
-                    onClick={"#"}
+                   onClick={() => toggleMobileMenu()}
                   >
                     Contact
                   </a>
@@ -142,17 +123,20 @@ const Navbar = () => {
               <li className="border-b pb-1 mr-50 border-0.5 border-stone-700">
                 <a
                   className="text-md hover:text-yellow-400 ease-in-out duration-300 "
-                  href="#"
-                  onClick={"#"}
+                  href="#intro"
+                 onClick={() => toggleMobileMenu()}
                 >
                   Intro
                 </a>
               </li>
-              <li className="border-b pb-1 mr-40 border-0.5 border-stone-700">
+              <li
+                id="#myWork"
+                className="border-b pb-1 mr-40 border-0.5 border-stone-700"
+              >
                 <a
                   className="text-md hover:text-yellow-400 ease-in-out duration-300"
-                  href="#"
-                  onClick={"#"}
+                  href="#myWork"
+                 onClick={() => toggleMobileMenu()}
                 >
                   My Work
                 </a>
@@ -160,8 +144,8 @@ const Navbar = () => {
               <li className="border-b pb-1 mr-30 border-0.5 border-stone-700">
                 <a
                   className="text-md hover:text-yellow-400 ease-in-out duration-300"
-                  href="#"
-                  onClick={"#"}
+                  href="#technologies"
+                 onClick={() => toggleMobileMenu()}
                 >
                   Technologies
                 </a>
@@ -169,8 +153,8 @@ const Navbar = () => {
               <li className="border-b pb-1 mr-20 border-0.5 border-stone-700">
                 <a
                   className="text-md hover:text-yellow-400 ease-in-out duration-300"
-                  href="#"
-                  onClick={"#"}
+                  href="#projects"
+                 onClick={() => toggleMobileMenu()}
                 >
                   Projects
                 </a>
@@ -178,8 +162,8 @@ const Navbar = () => {
               <li className="border-b pb-1 mr-10 border-0.5 border-stone-700">
                 <a
                   className="text-md hover:text-yellow-400 ease-in-out duration-300"
-                  href="#"
-                  onClick={"#"}
+                  href="#experience"
+                 onClick={() => toggleMobileMenu()}
                 >
                   Experience
                 </a>
@@ -187,15 +171,14 @@ const Navbar = () => {
               <li className="border-b pb-1 mr-0 border-0.5 border-stone-700">
                 <a
                   className="text-md hover:text-yellow-400 ease-in-out duration-300"
-                  href="#"
-                  onClick={"#"}
+                  href="#contact"
+                 onClick={() => toggleMobileMenu()}
                 >
                   Contact
                 </a>
               </li>
             </ul>
           )}
-          {/* _________________ */}
         </div>
       </nav>
     </div>

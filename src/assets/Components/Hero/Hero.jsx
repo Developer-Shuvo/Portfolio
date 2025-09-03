@@ -102,7 +102,7 @@ const childVariants = {
 
 const Hero = () => {
   return (
-    <div id="intro" className="pb-10 mt-20 lg:mt-0 lg:py-20  lg:-mb-36 relative">
+    <div id="intro" className="pb-10 mt-30 py-20 lg:mt-0 lg:py-20  lg:-mb-36 relative">
       <div className="flex flex-wrap lg:flex-row-reverse">
         {/*_______ Profile Image with Tilt Effect _______ */}
         <div className="w-full lg:w-1/2 flex justify-center lg:p-8">

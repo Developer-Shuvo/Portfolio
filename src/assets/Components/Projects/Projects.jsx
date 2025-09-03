@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 
 const Projects = () => {
   return (
-    <div id="projects" className="p-4 lg:py-20">
+    <div id="projects" className="p-4 py-20 lg:py-20">
       <motion.h1
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 0.5 }}
-        className=" lg:my-20 text-center text-3xl lg:text-5xl font-bold"
+        className=" lg:my-20 my-8 text-center text-3xl lg:text-5xl font-bold"
       >
         Projects
       </motion.h1>

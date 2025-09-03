@@ -10,7 +10,7 @@ import image9 from "./image9.jpg";
 
 const AnimationSlider = () => {
   return (
-    <div id="myWork" className="lg:py-20 mt-10  lg:mt-40 banner">
+    <div id="myWork" className="lg:py-20 mt-32 py-32  lg:mt-40 banner">
       {/* Slider Section */}
       <div className="slider" style={{ "--quantity": 10 }}>
         <div className="item" style={{ "--position": 1 }}>

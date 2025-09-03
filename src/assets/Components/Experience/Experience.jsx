@@ -2,7 +2,7 @@ import { EXPERIENCES } from "../../../../constants";
 import { motion } from "framer-motion";
 const Experience = () => {
   return (
-    <div id="experience" className="pb-4 py-20">
+    <div id="experience" className="pb-4 py-14 lg:py-20">
       <motion.h1
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
