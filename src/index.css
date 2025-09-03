@@ -11,6 +11,11 @@
   border: 2px solid red;
 }
 
+/* Scroll Down */
+html {
+  scroll-behavior: smooth;
+}
+
 /* -------- Animation Slider -------- */
 .banner {
   width: 100%;

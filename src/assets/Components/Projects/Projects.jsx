@@ -23,8 +23,8 @@ const Projects = () => {
             <div
               key={index}
               className="mb-8 
-               p-4 flex flex-wrap lg:justify-center border border-blue-900 
-               rounded-3xl shadow-lg shadow-gray-700 bg-transparent"
+               p-4 flex flex-wrap lg:justify-center border border-gray-800
+               rounded-3xl shadow-lg shadow-gray-700  bg-transparent"
             >
               {/* Project Image */}
               <motion.div

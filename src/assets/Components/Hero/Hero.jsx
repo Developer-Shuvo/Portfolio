@@ -159,7 +159,7 @@ const Hero = () => {
 
           {/* Scroll Down Icon */}
           <a
-            href="#about"
+            href="#page-bottom"
             className="flex items-center justify-center w-12 h-12 rounded-full border border-white text-white"
           >
             <FaChevronDown className="text-xl" />
