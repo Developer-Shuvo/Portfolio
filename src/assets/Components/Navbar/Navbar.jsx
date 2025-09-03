@@ -41,7 +41,7 @@ const Navbar = () => {
           <div className="flex justify-between items-center gap-6">
             {/* logo */}
             <div>
-              <a href="#">
+              <a href="#intro">
                 <img className="h-8 w-full" src={logo} width={90} alt="logo " />
               </a>
             </div>
@@ -52,7 +52,7 @@ const Navbar = () => {
                 <li>
                   <a
                     className="text-md hover:text-yellow-400 ease-in-out duration-300"
-                    href="#"
+                    href="#intro"
                     onClick={"#"}
                   >
                     Intro
@@ -61,7 +61,7 @@ const Navbar = () => {
                 <li>
                   <a
                     className="text-md hover:text-yellow-400 ease-in-out duration-300"
-                    href="#"
+                    href="#myWork"
                     onClick={"#"}
                   >
                     My Work
@@ -70,7 +70,7 @@ const Navbar = () => {
                 <li>
                   <a
                     className="text-md hover:text-yellow-400 ease-in-out duration-300"
-                    href="#"
+                    href="#technologies"
                     onClick={"#"}
                   >
                     Technologies
@@ -79,7 +79,7 @@ const Navbar = () => {
                 <li>
                   <a
                     className="text-md hover:text-yellow-400 ease-in-out duration-300"
-                    href="#"
+                    href="#projects"
                     onClick={"#"}
                   >
                     Projects
@@ -88,7 +88,7 @@ const Navbar = () => {
                 <li>
                   <a
                     className="text-md hover:text-yellow-400 ease-in-out duration-300"
-                    href="#"
+                    href="#experience"
                     onClick={"#"}
                   >
                     Experience
@@ -97,7 +97,7 @@ const Navbar = () => {
                 <li>
                   <a
                     className="text-md hover:text-yellow-400 ease-in-out duration-300"
-                    href="#"
+                    href="#contact"
                     onClick={"#"}
                   >
                     Contact
@@ -114,7 +114,7 @@ const Navbar = () => {
             <div>
               <a href="#">
                 <img
-                  className="h-8 w-full m-2"
+                  className="h-6 w-full m-2 pl-4"
                   src={logo}
                   alt="logo"
                   width={90}

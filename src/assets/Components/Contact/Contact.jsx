@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <section className="bg-[#1a1a1a] text-stone-400 px-8 py-40 mt-10 md:mt-20 lg:mt-32 md:px-14 lg:px-24">
+    <section id="contact" className="bg-[#1a1a1a] text-stone-400 px-8 py-40 mt-10 md:mt-20 lg:mt-32 md:px-14 lg:px-24">
       <div className="max-w-7xl mx-auto">
         {/* Heading + big section number */}
         <motion.div

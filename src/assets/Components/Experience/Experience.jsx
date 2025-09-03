@@ -2,12 +2,12 @@ import { EXPERIENCES } from "../../../../constants";
 import { motion } from "framer-motion";
 const Experience = () => {
   return (
-    <div className="pb-4">
+    <div id="experience" className="pb-4 py-20">
       <motion.h1
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 0.5 }}
-        className="my-20 text-center text-5xl font-bold"
+        className="my-20 text-center text-3xl lg:text-5xl  font-bold"
       >
         {" "}
         Experience
