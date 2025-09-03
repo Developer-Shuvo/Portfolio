@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import logo from "./logo.png";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes, FaTimesCircle } from "react-icons/fa";
 import { ul } from "framer-motion/client";
 
 const Navbar = () => {
@@ -128,16 +128,72 @@ const Navbar = () => {
                 onClick={toggleMobileMenu}
               >
                 {isMobileMenuOpen ? (
-                  <FaTimes className="m-2 h6 w-5" />
+                  <FaTimes className="m-4 h-6 w-5" />
                 ) : (
-                  <FaBars className="m-2 h-6 w-5" />
+                  <FaBars className="m-4 h-6 w-5" />
                 )}
               </button>
             </div>
           </div>
 
           {isMobileMenuOpen && (
-            <ul className="ml-4 mt-4 flex flex-col gap-4 backdrop-blur-md"></ul>
+            // Links for mobile view
+            <ul className="ml-8 mt-4 pb-4 flex flex-col gap-4 backdrop-blur-md">
+              <li className="border-b pb-1 mr-50 border-0.5 border-stone-700">
+                <a
+                  className="text-md hover:text-yellow-400 ease-in-out duration-300 "
+                  href="#"
+                  onClick={"#"}
+                >
+                  Intro
+                </a>
+              </li>
+              <li className="border-b pb-1 mr-40 border-0.5 border-stone-700">
+                <a
+                  className="text-md hover:text-yellow-400 ease-in-out duration-300"
+                  href="#"
+                  onClick={"#"}
+                >
+                  My Work
+                </a>
+              </li>
+              <li className="border-b pb-1 mr-30 border-0.5 border-stone-700">
+                <a
+                  className="text-md hover:text-yellow-400 ease-in-out duration-300"
+                  href="#"
+                  onClick={"#"}
+                >
+                  Technologies
+                </a>
+              </li>
+              <li className="border-b pb-1 mr-20 border-0.5 border-stone-700">
+                <a
+                  className="text-md hover:text-yellow-400 ease-in-out duration-300"
+                  href="#"
+                  onClick={"#"}
+                >
+                  Projects
+                </a>
+              </li>
+              <li className="border-b pb-1 mr-10 border-0.5 border-stone-700">
+                <a
+                  className="text-md hover:text-yellow-400 ease-in-out duration-300"
+                  href="#"
+                  onClick={"#"}
+                >
+                  Experience
+                </a>
+              </li>
+              <li className="border-b pb-1 mr-0 border-0.5 border-stone-700">
+                <a
+                  className="text-md hover:text-yellow-400 ease-in-out duration-300"
+                  href="#"
+                  onClick={"#"}
+                >
+                  Contact
+                </a>
+              </li>
+            </ul>
           )}
           {/* _________________ */}
         </div>
