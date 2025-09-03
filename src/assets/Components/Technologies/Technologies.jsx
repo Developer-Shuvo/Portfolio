@@ -32,7 +32,7 @@ const Technologies = () => {
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 1.5 }}
-        className="my-20 text-center text-4xl"
+        className="my-20 text-center text-5xl font-bold"
       >
         Technologies
       </motion.h1>
@@ -84,7 +84,7 @@ const Technologies = () => {
           animate="animate"
           variants={iconVariants(5)}
         >
-          <RiNextjsLine className="text-7xl text-cyan-400" />
+          <RiNextjsLine className="text-7xl text-stone-00" />
         </motion.div>
         {/* Mongo DB */}
         <motion.div
@@ -100,23 +100,16 @@ const Technologies = () => {
           animate="animate"
           variants={iconVariants(2)}
         >
-          <RiNodejsLine className="text-7xl text-cyan-400" />
+          <RiNodejsLine className="text-7xl text-green-600" />
         </motion.div>
-        {/* Mongo DB */}
-        <motion.div
-          initial="initial"
-          animate="animate"
-          variants={iconVariants(4)}
-        >
-          <SiMongodb className="text-7xl text-cyan-400" />
-        </motion.div>
+
         {/* Github */}
         <motion.div
           initial="initial"
           animate="animate"
           variants={iconVariants(2)}
         >
-          <SiGithub className="text-7xl text-cyan-400" />
+          <SiGithub className="text-7xl text-white" />
         </motion.div>
         {/* Figma */}
         <motion.div
@@ -125,6 +118,15 @@ const Technologies = () => {
           variants={iconVariants(3)}
         >
           <SiFigma className="text-7xl text-pink-500" />
+        </motion.div>
+
+        {/* Mongo DB */}
+        <motion.div
+          initial="initial"
+          animate="animate"
+          variants={iconVariants(4)}
+        >
+          <SiMongodb className="text-7xl text-green-600" />
         </motion.div>
       </motion.div>
     </div>
