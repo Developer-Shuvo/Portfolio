@@ -1,5 +1,5 @@
-import image1 from "./image1.jpg";
-import image2 from "./image2.jpg";
+import image1 from "./clock.png";
+import image2 from "./technology-zone.png";
 import image3 from "./image3.jpg";
 import image4 from "./image4.jpg";
 import image5 from "./image5.jpg";
@@ -14,13 +14,18 @@ const AnimationSlider = () => {
       {/* Slider Section */}
       <div className="slider" style={{ "--quantity": 10 }}>
         <div className="item" style={{ "--position": 1 }}>
-          <a href="#">
+          {/* Image 1 */}
+          <a target="_blank" href="https://special-clock.netlify.app/">
             <img src={image1} alt="" />
           </a>
         </div>
 
+        {/* Image 2 */}
         <div className="item" style={{ "--position": 2 }}>
-          <a href="#">
+          <a
+            target="_blank"
+            href="https://technology-zone-by-shuvooo.netlify.app/"
+          >
             <img src={image2} alt="" />
           </a>
         </div>
@@ -69,7 +74,7 @@ const AnimationSlider = () => {
       {/* Text & image Section */}
       <div className="content">
         <h1 data-content="MY WORK">MY WORK</h1>
-       
+
         <div className="model"></div>
       </div>
     </div>

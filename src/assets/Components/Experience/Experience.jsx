@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 
 const Experience = () => {
   const bgColors = [
-    "bg-gradient-to-br from-red-400 to-pink-500",
-    "bg-gradient-to-br from-orange-500 to-yellow-400",
+    "bg-gradient-to-br from-lime-400 to-pink-600",
+    "bg-gradient-to-br from-blue-500 to-green-400",
     "bg-gradient-to-br from-green-400 to-emerald-500",
     "bg-gradient-to-br from-purple-500 to-indigo-500",
     "bg-gradient-to-br from-yellow-400 to-amber-500",
@@ -26,7 +26,8 @@ const Experience = () => {
       </motion.h1>
 
       {/* Experience Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 place-items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 place-items-center 
+      ">
         {EXPERIENCES.map((experience, index) => {
           const bgColor = bgColors[index % bgColors.length];
 
