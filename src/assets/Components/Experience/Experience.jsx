@@ -1,57 +1,102 @@
+"use client";
 import { EXPERIENCES } from "../../../../constants";
 import { motion } from "framer-motion";
+
 const Experience = () => {
+  const bgColors = [
+    "bg-gradient-to-br from-red-400 to-pink-500",
+    "bg-gradient-to-br from-orange-500 to-yellow-400",
+    "bg-gradient-to-br from-green-400 to-emerald-500",
+    "bg-gradient-to-br from-purple-500 to-indigo-500",
+    "bg-gradient-to-br from-yellow-400 to-amber-500",
+  ];
+
   return (
-    <div id="experience" className="pb-4 py-14 lg:py-20">
+    <div id="experience" className="py-14 lg:py-20 ">
+      {/* Section Heading */}
       <motion.h1
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
-        transition={{ duration: 0.5 }}
-        className="my-20 text-center text-3xl lg:text-5xl  font-bold"
+        transition={{ duration: 0.6 }}
+        className="mb-16 text-center text-3xl md:text-4xl lg:text-5xl 
+        font-extrabold tracking-wide bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-700 
+        text-transparent bg-clip-text"
       >
-        {" "}
         Experience
       </motion.h1>
 
-      <div>
-        {EXPERIENCES.map((experience, index) => (
-          <div key={index} className="mb-8 flex flex-wrap lg:justify-center ">
+      {/* Experience Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 place-items-center">
+        {EXPERIENCES.map((experience, index) => {
+          const bgColor = bgColors[index % bgColors.length];
+
+          return (
             <motion.div
-              whileInView={{ opacity: 1, x: 0 }}
-              initial={{ opacity: 0, x: -100 }}
-              transition={{ duration: 1 }}
-              className="w-full lg:w-1/4"
+              key={index}
+              className="relative w-[90%] sm:w-[80%] lg:w-[85%] h-auto flex justify-center items-center"
+              initial={{ scale: 0.7, opacity: 0, y: 100 }}
+              whileInView={{ scale: 1, opacity: 1, y: 0 }}
+              transition={{
+                type: "spring",
+                stiffness: 100,
+                damping: 18,
+                delay: index * 0.2,
+              }}
+              viewport={{ once: true, amount: 0.3 }}
             >
-              <p className="mb-2 text-sm text-stone-400">{experience.year}</p>
+              {/* Background Gradient Box */}
+              <div
+                className={`absolute inset-0 ${bgColor} blur-2xl opacity-20 rounded-3xl`}
+              ></div>
+
+              {/* Foreground Card */}
+              <motion.div
+                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, x: -100 }}
+                whileHover={{ scale: 1.04, y: 10 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 50,
+                  damping: 10,
+                }}
+                className="relative border border-white/20 backdrop-blur-lg 
+                w-full p-6 md:p-8 rounded-2xl shadow-md hover:shadow-lg hover:shadow-purple-900  z-10 
+                bg-yellow/10 text-white "
+              >
+                {/* Year */}
+                <p className="text-sm md:text-base font-semibold text-gray-300">
+                  {experience.year}
+                </p>
+
+                {/* Role & Company */}
+                <h2 className="text-xl md:text-2xl font-bold mt-2">
+                  {experience.role}{" "}
+                  <span className="text-gray-400 font-medium">
+                    @ {experience.company}
+                  </span>
+                </h2>
+
+                {/* Description */}
+                <p className="text-gray-200 mt-4 mb-6 leading-relaxed text-sm md:text-base">
+                  {experience.description}
+                </p>
+
+                {/* Technologies */}
+                <div className="flex flex-wrap gap-3">
+                  {experience.technologies.map((tech, idx) => (
+                    <span
+                      key={idx}
+                      className=" text-gray-100 text-xs md:text-sm font-medium px-3 py-1.5 
+                      rounded-full border border-white/30 hover:bg-white/30 transition"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
             </motion.div>
-
-            <motion.div
-              whileInView={{ opacity: 1, x: 0 }}
-              initial={{ opacity: 0, x: 100 }}
-              transition={{ duration: 1 }}
-              className="w-full max-w-xl lg:w-3/4"
-            >
-              <h2 className="mb-2 font-semibold ">
-                {experience.role}
-
-                <span className="text-sm text-stone-500">
-                  {" "}
-                  {experience.company}
-                </span>
-              </h2>
-
-              <p className="mb-4 text-stone-400"> {experience.description}</p>
-              {experience.technologies.map((tech, index) => (
-                <span
-                  className="mr-2 mt-4 rounded-1 bg-stone-900 px-2 py-1 text-sm font-medium text-stone-300"
-                  key={index}
-                >
-                  {tech}
-                </span>
-              ))}
-            </motion.div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );
