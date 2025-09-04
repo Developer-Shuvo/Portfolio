@@ -8,6 +8,7 @@ import {
   FaTwitter,
   FaChevronDown,
   FaLinkedin,
+  FaChevronUp,
 } from "react-icons/fa";
 
 // CardTilt logic for profile image
@@ -112,7 +113,12 @@ const Hero = () => {
         </div>
 
         {/*_______ Social Icons & Scroll Indicator _______ */}
-        <div className="hidden lg:flex flex-col items-center gap-4 text-3xl absolute right-0 top-1/2 -translate-y-1/2 mr-8">
+        <motion.div
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: -100 }}
+          transition={{ duration: 0.8 }}
+          className="hidden lg:flex flex-col items-center gap-4 text-2xl fixed right-10 top-2/5 -translate-y-1/2 mr-8 z-[999]"
+        >
           <a
             href="https://github.com/Developer-Shuvo"
             target="_blank"
@@ -153,18 +159,25 @@ const Hero = () => {
           >
             <FaInstagram />
           </a>
-
           {/* Vertical Line */}
-          <div className="h-28 w-0.5 bg-stone-400 my-2"></div>
+          <div className="h-28 w-[1px] bg-stone-400"></div>
 
           {/* Scroll Down Icon */}
           <a
-            href="#page-bottom"
-            className="flex items-center justify-center w-12 h-12 rounded-full border border-white text-white"
+            href="#contact"
+            className="flex items-center justify-center w-10 h-10 rounded-full border-2 border-lime-600 text-white"
           >
-            <FaChevronDown className="text-xl" />
+            <FaChevronDown className="text-lg text-lime-400" />
           </a>
-        </div>
+
+          {/* Scroll Up Icon */}
+          <a
+            href="#intro"
+            className="flex items-center justify-center w-8 h-8 rounded-full border-2 border-sky-400 text-white"
+          >
+            <FaChevronUp className="text-sm text-sky-400" />
+          </a>
+        </motion.div>
 
         {/*_______ Name, Title_______ */}
         <div className="w-full lg:w-1/2">

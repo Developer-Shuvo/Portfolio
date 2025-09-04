@@ -10,7 +10,7 @@
 .borders {
   border: 2px solid red;
 }
-
+/* ========সকল পেইজ লিংকে ক্লিক করার পরে স্ক্রোল হবে স্মোথলি এই কমান্ড দিয়ে ======= */
 /* Scroll Down */
 html {
   scroll-behavior: smooth;
