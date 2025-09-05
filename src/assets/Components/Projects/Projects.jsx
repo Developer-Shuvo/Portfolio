@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Projects = () => {
   return (
-    <div id="projects" className="p-4 py-20 lg:py-20">
+    <div id="projects" className="p-4 py-20 lg:py-20 ">
       <motion.h1
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
@@ -20,23 +20,33 @@ const Projects = () => {
             project,
             index // Renamed 'Projects' to 'project' for clarity
           ) => (
-            <div
+            // Full Card Body it is
+            <motion.a
+            href = {project.link}
+              whileHover={{ scale: 1.04, y: 10 }}
+              transition={{
+                type: "spring",
+                stiffness: 50,
+                damping: 10,
+              }}
+              target="_blank"
+              
               key={index}
               className="mb-8 
                p-4 flex flex-wrap lg:justify-center border border-gray-800
-               rounded-3xl shadow-lg shadow-gray-700  bg-transparent"
+               rounded-3xl shadow-lg hover:shadow-gray-700  bg-transparent  "
             >
               {/* Project Image */}
               <motion.div
                 whileInView={{ opacity: 1, x: 0 }}
                 initial={{ opacity: 0, x: -100 }}
                 transition={{ duration: 1 }}
-                className="w-full lg:w-1/4 justify-center items-center flex"
+                className="w-full h-[300px] lg:w-1/4 justify-center items-center flex"
               >
                 <img
                   src={project.image} // Changed from Projects.image
-                  width={250}
-                  height={250}
+                  width={300}
+                  height={350}
                   alt={project.title} // Corrected alt text to be dynamic
                   className="mb-6 rounded lg:mr-4" // Added margin-right for spacing
                 />
@@ -49,7 +59,7 @@ const Projects = () => {
                 transition={{ duration: 1 }}
                 className="w-full max-w-xl lg:w-3/4 "
               >
-                <h3 className="mb-2 font-semibold text-2xl">
+                <h3 className="mb-2 lg:mt-10 font-semibold text-2xl">
                   {project.title} {/* Changed from Projects.title */}
                 </h3>
 
@@ -69,7 +79,7 @@ const Projects = () => {
                   ))}
                 </div>
               </motion.div>
-            </div>
+            </motion.a>
           )
         )}
       </div>

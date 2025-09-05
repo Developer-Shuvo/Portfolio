@@ -1,5 +1,5 @@
 import project1 from "../assets/projects/Technology-zone.png";
-import project2 from "../assets/projects/project-2.webp";
+import project2 from "../assets/projects/clock.png";
 import project3 from "../assets/projects/project-3.webp";
 import project4 from "../assets/projects/project-4.webp";
 
@@ -9,52 +9,60 @@ export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer w
 
 export const EXPERIENCES = [
   {
-    year: "2023 - Present",
-    role: "Senior Full Stack Developer",
-    company: "Google Inc.",
+    year: "2025 - Present",
+    role: "Frontend With API integration",
+    company: "Local",
     description: `Led a team in developing and maintaining web applications using JavaScript, React.js, and Node.js. Implemented RESTful APIs and integrated with MongoDB databases. Collaborated with stakeholders to define project requirements and timelines.`,
-    technologies: ["Javascript", "React.js", "Next.js", "mongoDB"],
+    technologies: ["Javascript", "React.js", "Next.js", "mongoDB", "TailWind"],
+  },
+  {
+    year: "2023 - 2024",
+    role: "Frontend Developer",
+    company: "Remote/local",
+    description: `Designed and developed user interfaces for web applications using Next.js and React. Worked closely with backend developers to integrate frontend components with Node.js APIs. Implemented responsive designs and optimized frontend performance.`,
+    technologies: ["HTML", "CSS", "JavaScript", "TailWind", "Authentication"],
   },
   {
     year: "2022 - 2023",
-    role: "Frontend Developer",
-    company: "Adobe",
-    description: `Designed and developed user interfaces for web applications using Next.js and React. Worked closely with backend developers to integrate frontend components with Node.js APIs. Implemented responsive designs and optimized frontend performance.`,
-    technologies: ["HTML", "CSS", "Vue.js", "mySQL"],
-  },
-  {
-    year: "2021 - 2022",
-    role: "Full Stack Developer",
-    company: "Facebook",
+    role: "Landing Page Designer",
+    company: "Local/Small Project",
     description: `Developed and maintained web applications using JavaScript, React.js, and Node.js. Designed and implemented RESTful APIs for data communication. Collaborated with cross-functional teams to deliver high-quality software products on schedule.`,
-    technologies: ["Python", "Svelte", "Three.js", "Postgres"],
+    technologies: ["HTML", "CSS", "Bootstrap"],
   },
   {
-    year: "2020 - 2021",
-    role: "Software Engineer",
-    company: "Paypal",
+    year: "2020 - 2022",
+    role: "Start Work",
+    company: "Small Project",
     description: `Contributed to the development of web applications using JavaScript, React.js, and Node.js. Managed databases and implemented data storage solutions using MongoDB. Worked closely with product managers to prioritize features and enhancements.`,
-    technologies: ["Ruby", "Rails", "PHP", "Sqlite"],
+    technologies: [
+      "Functionality",
+      "Landing Page idea build",
+      "Basic Start",
+      "HTML/CSS",
+    ],
   },
 ];
 
 export const PROJECTS = [
   {
     title: "E-Commerce Website",
+    link: "https://technology-zone-by-shuvooo.netlify.app/",
     image: project1,
     description:
       "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
-    technologies: ["HTML", "CSS", "React", "TailWind Css", "JavaScript"],
+    technologies: ["HTML", "CSS", "React", "TailWind", "JavaScript"],
   },
   {
-    title: "Task Management App",
+    title: "Dynamic Clock",
+    link: "https://special-clock.netlify.app/",
     image: project2,
     description:
       "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
-    technologies: ["HTML", "CSS", "Angular", "Firebase"],
+    technologies: ["HTML", "CSS", "TailWind", "JavaScript"],
   },
   {
     title: "Portfolio Website",
+    link: "https://special-clock.netlify.app/",
     image: project3,
     description:
       "A personal portfolio website showcasing projects, skills, and contact information.",
@@ -62,15 +70,10 @@ export const PROJECTS = [
   },
   {
     title: "Blogging Platform",
+    link: "https://special-clock.netlify.app/",
     image: project4,
     description:
       "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
     technologies: ["HTML", "CSS", "Vue.js", "Express", "mySQL"],
   },
 ];
-
-export const CONTACT = {
-  address: "767 Fifth Avenue, New York, NY 10153 ",
-  phoneNo: "+12 4555 666 00 ",
-  email: "me@example.com",
-};
