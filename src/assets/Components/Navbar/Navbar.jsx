@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import logo from "./logo.png";
-import { FaBars, FaTimes, FaTimesCircle } from "react-icons/fa";
-import { ul } from "framer-motion/client";
+import { FaBars, FaTimes } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -10,17 +10,24 @@ const Navbar = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  console.log(isMobileMenuOpen, "mobile open");
+  // Scroll করলে মেনু বন্ধ হয়ে যাবে
+  useEffect(() => {
+    const handleScroll = () => {
+      if (isMobileMenuOpen) setMobileMenuOpen(false);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isMobileMenuOpen]);
 
   return (
     <div className="">
-      <nav className="fixed left-0 right-0 top-4  z-50">
+      <nav className="fixed left-0 right-0 top-4 z-50">
         {/* Navbar */}
         <div
           className="mx-auto hidden max-w-3xl items-center justify-center rounded-lg
-           bg-black/20 py-3  backdrop-blur-lg lg:flex"
+           bg-black/20 py-3 backdrop-blur-lg lg:flex"
         >
-          <div className="flex justify-between items-center gap-6">
+          <div className="flex justify-between items-center gap-20">
             {/* logo */}
             <div>
               <a href="#intro">
@@ -30,8 +37,8 @@ const Navbar = () => {
 
             {/* links */}
             <div>
-              <ul className="flex items-center gap-6">
-                <li onClick={() => toggleMobileMenu()}>
+              <ul className="flex items-center gap-4">
+                <li onClick={toggleMobileMenu}>
                   <a
                     className="text-md hover:text-yellow-400 ease-in-out duration-300"
                     href="#intro"
@@ -43,7 +50,7 @@ const Navbar = () => {
                   <a
                     className="text-md hover:text-yellow-400 ease-in-out duration-300"
                     href="#myWork"
-                   onClick={() => toggleMobileMenu()}
+                    onClick={toggleMobileMenu}
                   >
                     My Work
                   </a>
@@ -52,7 +59,7 @@ const Navbar = () => {
                   <a
                     className="text-md hover:text-yellow-400 ease-in-out duration-300"
                     href="#technologies"
-                   onClick={() => toggleMobileMenu()}
+                    onClick={toggleMobileMenu}
                   >
                     Technologies
                   </a>
@@ -61,7 +68,7 @@ const Navbar = () => {
                   <a
                     className="text-md hover:text-yellow-400 ease-in-out duration-300"
                     href="#projects"
-                   onClick={() => toggleMobileMenu()}
+                    onClick={toggleMobileMenu}
                   >
                     Projects
                   </a>
@@ -70,7 +77,7 @@ const Navbar = () => {
                   <a
                     className="text-md hover:text-yellow-400 ease-in-out duration-300"
                     href="#experience"
-                   onClick={() => toggleMobileMenu()}
+                    onClick={toggleMobileMenu}
                   >
                     Experience
                   </a>
@@ -79,7 +86,7 @@ const Navbar = () => {
                   <a
                     className="text-md hover:text-yellow-400 ease-in-out duration-300"
                     href="#contact"
-                   onClick={() => toggleMobileMenu()}
+                    onClick={toggleMobileMenu}
                   >
                     Contact
                   </a>
@@ -117,68 +124,76 @@ const Navbar = () => {
             </div>
           </div>
 
-          {isMobileMenuOpen && (
-            // Links for mobile view
-            <ul className="ml-8 mt-4 pb-4 flex flex-col gap-4 backdrop-blur-md">
-              <li className="border-b pb-1 mr-50 border-0.5 border-stone-700">
-                <a
-                  className="text-md hover:text-yellow-400 ease-in-out duration-300 "
-                  href="#intro"
-                 onClick={() => toggleMobileMenu()}
-                >
-                  Intro
-                </a>
-              </li>
-              <li
-                id="#myWork"
-                className="border-b pb-1 mr-40 border-0.5 border-stone-700"
+          {/* AnimatePresence দিয়ে মোড়ানো */}
+          <AnimatePresence>
+            {isMobileMenuOpen && (
+              <motion.ul
+                initial={{ y: -200, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: -200, opacity: 0 }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
+                className="ml-8 mt-4 pb-4 flex flex-col gap-4 backdrop-blur-md"
               >
-                <a
-                  className="text-md hover:text-yellow-400 ease-in-out duration-300"
-                  href="#myWork"
-                 onClick={() => toggleMobileMenu()}
+                <li className="border-b pb-1 mr-50 border-0.5 border-stone-700">
+                  <a
+                    className="text-md hover:text-yellow-400 ease-in-out duration-300 "
+                    href="#intro"
+                    onClick={toggleMobileMenu}
+                  >
+                    Intro
+                  </a>
+                </li>
+                <li
+                  id="#myWork"
+                  className="border-b pb-1 mr-40 border-0.5 border-stone-700"
                 >
-                  My Work
-                </a>
-              </li>
-              <li className="border-b pb-1 mr-30 border-0.5 border-stone-700">
-                <a
-                  className="text-md hover:text-yellow-400 ease-in-out duration-300"
-                  href="#technologies"
-                 onClick={() => toggleMobileMenu()}
-                >
-                  Technologies
-                </a>
-              </li>
-              <li className="border-b pb-1 mr-20 border-0.5 border-stone-700">
-                <a
-                  className="text-md hover:text-yellow-400 ease-in-out duration-300"
-                  href="#projects"
-                 onClick={() => toggleMobileMenu()}
-                >
-                  Projects
-                </a>
-              </li>
-              <li className="border-b pb-1 mr-10 border-0.5 border-stone-700">
-                <a
-                  className="text-md hover:text-yellow-400 ease-in-out duration-300"
-                  href="#experience"
-                 onClick={() => toggleMobileMenu()}
-                >
-                  Experience
-                </a>
-              </li>
-              <li className="border-b pb-1 mr-0 border-0.5 border-stone-700">
-                <a
-                  className="text-md hover:text-yellow-400 ease-in-out duration-300"
-                  href="#contact"
-                 onClick={() => toggleMobileMenu()}
-                >
-                  Contact
-                </a>
-              </li>
-            </ul>
-          )}
+                  <a
+                    className="text-md hover:text-yellow-400 ease-in-out duration-300"
+                    href="#myWork"
+                    onClick={toggleMobileMenu}
+                  >
+                    My Work
+                  </a>
+                </li>
+                <li className="border-b pb-1 mr-30 border-0.5 border-stone-700">
+                  <a
+                    className="text-md hover:text-yellow-400 ease-in-out duration-300"
+                    href="#technologies"
+                    onClick={toggleMobileMenu}
+                  >
+                    Technologies
+                  </a>
+                </li>
+                <li className="border-b pb-1 mr-20 border-0.5 border-stone-700">
+                  <a
+                    className="text-md hover:text-yellow-400 ease-in-out duration-300"
+                    href="#projects"
+                    onClick={toggleMobileMenu}
+                  >
+                    Projects
+                  </a>
+                </li>
+                <li className="border-b pb-1 mr-10 border-0.5 border-stone-700">
+                  <a
+                    className="text-md hover:text-yellow-400 ease-in-out duration-300"
+                    href="#experience"
+                    onClick={toggleMobileMenu}
+                  >
+                    Experience
+                  </a>
+                </li>
+                <li className="border-b pb-1 mr-2 border-0.5 border-stone-700">
+                  <a
+                    className="text-md hover:text-yellow-400 ease-in-out duration-300"
+                    href="#contact"
+                    onClick={toggleMobileMenu}
+                  >
+                    Contact
+                  </a>
+                </li>
+              </motion.ul>
+            )}
+          </AnimatePresence>
         </div>
       </nav>
     </div>
