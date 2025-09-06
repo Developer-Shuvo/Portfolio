@@ -1,6 +1,6 @@
 import image1 from "./clock.png";
 import image2 from "./technology-zone.png";
-import image3 from "./image3.jpg";
+import image3 from "./books-world.png";
 import image4 from "./image4.jpg";
 import image5 from "./image5.jpg";
 import image6 from "./image6.jpg";
@@ -29,8 +29,9 @@ const AnimationSlider = () => {
             <img src={image2} alt="" />
           </a>
         </div>
+        {/* Image 3 */}
         <div className="item" style={{ "--position": 3 }}>
-          <a href="#">
+          <a href="https://book-workd-by-shuvo.netlify.app/">
             <img src={image3} alt="" />
           </a>
         </div>
