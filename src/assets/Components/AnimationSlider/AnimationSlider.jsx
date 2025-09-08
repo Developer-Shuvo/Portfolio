@@ -1,7 +1,7 @@
 import image1 from "./clock.png";
 import image2 from "./technology-zone.png";
 import image3 from "./books-world.png";
-import image4 from "./image4.jpg";
+import image4 from "./mobile-banking.png";
 import image5 from "./image5.jpg";
 import image6 from "./image6.jpg";
 import image7 from "./image7.jpg";
@@ -15,7 +15,7 @@ const AnimationSlider = () => {
       <div className="slider" style={{ "--quantity": 10 }}>
         <div className="item" style={{ "--position": 1 }}>
           {/* Image 1 */}
-          <a target="_blank" href="https://special-clock.netlify.app/">
+          <a target="_blank" href="https://dynamic-clock-by-shuvo.netlify.app/">
             <img src={image1} alt="" />
           </a>
         </div>
@@ -31,17 +31,22 @@ const AnimationSlider = () => {
         </div>
         {/* Image 3 */}
         <div className="item" style={{ "--position": 3 }}>
-          <a href="https://book-workd-by-shuvo.netlify.app/">
+          <a target="_blank" href="https://book-workd-by-shuvo.netlify.app/">
             <img src={image3} alt="" />
           </a>
         </div>
+
+        {/* image 4 */}
         <div className="item" style={{ "--position": 4 }}>
-          <a href="#">
+          <a
+            target="_blank"
+            href="https://mobile-banking-by-shuvo.netlify.app/index.html"
+          >
             <img src={image4} alt="" />
           </a>
         </div>
         <div className="item" style={{ "--position": 5 }}>
-          <a href="#">
+          <a href="https://ecommerce-by-shuvo.netlify.app/">
             <img src={image5} alt="" />
           </a>
         </div>

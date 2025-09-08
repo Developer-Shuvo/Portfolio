@@ -40,7 +40,7 @@ const Navbar = () => {
               <ul className="flex items-center gap-4">
                 <li onClick={toggleMobileMenu}>
                   <a
-                    className="text-md hover:text-yellow-400 ease-in-out duration-300"
+                    className="text-md hover:text-purple-400 ease-in-out duration-300"
                     href="#intro"
                   >
                     Intro
@@ -48,7 +48,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <a
-                    className="text-md hover:text-yellow-400 ease-in-out duration-300"
+                    className="text-md hover:text-purple-400 ease-in-out duration-300"
                     href="#myWork"
                     onClick={toggleMobileMenu}
                   >
@@ -57,7 +57,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <a
-                    className="text-md hover:text-yellow-400 ease-in-out duration-300"
+                    className="text-md hover:text-purple-400 ease-in-out duration-300"
                     href="#technologies"
                     onClick={toggleMobileMenu}
                   >
@@ -66,7 +66,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <a
-                    className="text-md hover:text-yellow-400 ease-in-out duration-300"
+                    className="text-md hover:text-purple-400 ease-in-out duration-300"
                     href="#projects"
                     onClick={toggleMobileMenu}
                   >
@@ -75,7 +75,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <a
-                    className="text-md hover:text-yellow-400 ease-in-out duration-300"
+                    className="text-md hover:text-purple-400 ease-in-out duration-300"
                     href="#experience"
                     onClick={toggleMobileMenu}
                   >
@@ -84,7 +84,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <a
-                    className="text-md hover:text-yellow-400 ease-in-out duration-300"
+                    className="text-md hover:text-purple-400 ease-in-out duration-300"
                     href="#contact"
                     onClick={toggleMobileMenu}
                   >
@@ -136,7 +136,7 @@ const Navbar = () => {
               >
                 <li className="border-b pb-1 mr-50 border-0.5 border-stone-700">
                   <a
-                    className="text-md hover:text-yellow-400 ease-in-out duration-300 "
+                    className="text-md hover:text-purple-400 ease-in-out duration-300 "
                     href="#intro"
                     onClick={toggleMobileMenu}
                   >
@@ -148,7 +148,7 @@ const Navbar = () => {
                   className="border-b pb-1 mr-40 border-0.5 border-stone-700"
                 >
                   <a
-                    className="text-md hover:text-yellow-400 ease-in-out duration-300"
+                    className="text-md hover:text-purple-400 ease-in-out duration-300"
                     href="#myWork"
                     onClick={toggleMobileMenu}
                   >
@@ -157,7 +157,7 @@ const Navbar = () => {
                 </li>
                 <li className="border-b pb-1 mr-30 border-0.5 border-stone-700">
                   <a
-                    className="text-md hover:text-yellow-400 ease-in-out duration-300"
+                    className="text-md hover:text-purple-400 ease-in-out duration-300"
                     href="#technologies"
                     onClick={toggleMobileMenu}
                   >
@@ -166,7 +166,7 @@ const Navbar = () => {
                 </li>
                 <li className="border-b pb-1 mr-20 border-0.5 border-stone-700">
                   <a
-                    className="text-md hover:text-yellow-400 ease-in-out duration-300"
+                    className="text-md hover:text-purple-400 ease-in-out duration-300"
                     href="#projects"
                     onClick={toggleMobileMenu}
                   >
@@ -175,7 +175,7 @@ const Navbar = () => {
                 </li>
                 <li className="border-b pb-1 mr-10 border-0.5 border-stone-700">
                   <a
-                    className="text-md hover:text-yellow-400 ease-in-out duration-300"
+                    className="text-md hover:text-purple-400 ease-in-out duration-300"
                     href="#experience"
                     onClick={toggleMobileMenu}
                   >

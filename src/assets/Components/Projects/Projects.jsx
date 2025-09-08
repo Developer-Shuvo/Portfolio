@@ -22,7 +22,7 @@ const Projects = () => {
           ) => (
             // Full Card Body it is
             <motion.a
-            href = {project.link}
+              href={project.link}
               whileHover={{ scale: 1.04, y: 10 }}
               transition={{
                 type: "spring",
@@ -30,7 +30,6 @@ const Projects = () => {
                 damping: 10,
               }}
               target="_blank"
-              
               key={index}
               className="mb-8 
                p-4 flex flex-wrap lg:justify-center border border-gray-800
@@ -44,11 +43,11 @@ const Projects = () => {
                 className="w-full h-[300px] lg:w-1/4 justify-center items-center flex"
               >
                 <img
-                  src={project.image} // Changed from Projects.image
-                  width={300}
-                  height={350}
-                  alt={project.title} // Corrected alt text to be dynamic
-                  className="mb-6 rounded lg:mr-4" // Added margin-right for spacing
+                  src={project.image}
+                  alt={project.title}
+                  className="mb-6 rounded-lg object-contain lg:mr-20 
+               w-full h-[250px] max-w-[250px] 
+               sm:h-[200px] sm:max-w-full"
                 />
               </motion.div>
 

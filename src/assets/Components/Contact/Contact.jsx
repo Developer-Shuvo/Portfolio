@@ -1,10 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-
 const Contact = () => {
   return (
-    <section id="contact" className="bg-[#1a1a1a] text-stone-400 px-8 py-40 mt-10 md:mt-20 lg:mt-32 md:px-14 lg:px-24">
+    <section
+      id="contact"
+      className="bg-[#1a1a1a] text-stone-400 px-8 py-40 mt-10 md:mt-20 lg:mt-32 md:px-14 lg:px-24"
+    >
       <div className="max-w-7xl mx-auto">
         {/* Heading + big section number */}
         <motion.div
@@ -129,12 +131,14 @@ const Contact = () => {
             transition={{ duration: 1 }}
             className="lg:col-span-6"
           >
-            <button
-              className="w-full bg-[#D5411D] border border-[#D5411D] hover:bg-[#c13a18] text-stone-300 hover:text-stone-100 transition duration-300 py-5 uppercase tracking-[0.25em] text-sm font-semibold"
-              type="button"
-            >
-              Message Me
-            </button>
+            <a href="https://wa.me/+8801817422784" target="_blank">
+              <button
+                className="w-full bg-[#D5411D] border border-[#D5411D] hover:bg-[#c13a18] text-stone-300 hover:text-stone-100 transition duration-300 py-5 uppercase tracking-[0.25em] text-sm font-semibold"
+                type="button"
+              >
+                Message Me
+              </button>
+            </a>
           </motion.div>
           <motion.div
             whileInView={{ opacity: 1, x: 0 }}
@@ -145,6 +149,7 @@ const Contact = () => {
             <a href="#" className="" download="">
               {" "}
               <a href="https://drive.google.com/file/d/18OKI4hFKohKrQsPcdgVrHPctd0Qr4DSL/view?usp=sharing">
+                {/* Cv */}
                 <button
                   className="w-full border border-gray-500 hover:bg-white hover:text-black transition duration-500 py-5 uppercase tracking-[0.25em] text-sm font-semibold"
                   type="button"

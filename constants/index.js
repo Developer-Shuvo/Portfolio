@@ -1,7 +1,7 @@
 import project1 from "../assets/projects/Technology-zone.png";
 import project2 from "../assets/projects/clock.png";
 import project3 from "../assets/projects/books-world.png";
-import project4 from "../assets/projects/project-4.webp";
+import project4 from "../assets/projects/mobile-banking.png";
 
 export const HERO_CONTENT = `I am a passionate full stack developer with a knack for crafting robust and scalable web applications. With 5 years of hands-on experience, I have honed my skills in front-end technologies like React and Next.js, as well as back-end technologies like Node.js, MySQL, PostgreSQL, and MongoDB. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
 
@@ -69,8 +69,8 @@ export const PROJECTS = [
     technologies: ["HTML", "CSS", "React", "Bootstrap"],
   },
   {
-    title: "Blogging Platform",
-    link: "https://special-clock.netlify.app/",
+    title: "Mobile Banking App",
+    link: "https://mobile-banking-by-shuvo.netlify.app/index.html",
     image: project4,
     description:
       "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
