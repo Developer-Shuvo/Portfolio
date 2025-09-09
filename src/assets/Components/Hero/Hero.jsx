@@ -119,63 +119,117 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           className="hidden lg:flex flex-col items-center gap-4 text-2xl fixed right-10 top-2/5 -translate-y-1/2 mr-8 z-[999]"
         >
+          {/* GitHub */}
           <a
             href="https://github.com/Developer-Shuvo"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
+            className="relative group flex flex-col items-center text-stone-400 transition"
           >
-            <FaGithub />
+            {/* Floating background glow */}
+            <span className="absolute -inset-2 rounded-full bg-lime-600 scale-0 group-hover:scale-125 group-hover:opacity-80 transition-all duration-700"></span>
+
+            {/* Icon */}
+            <FaGithub className="relative z-10 text-2xl transition-transform duration-700 group-hover:scale-110 group-hover:rotate-360 text-stone-300" />
+
+            {/* Tooltip text (left side) */}
+            <span className="absolute left-[150px] opacity-0 group-hover:left-[-130px] group-hover:opacity-100 bg-lime-600 text-white text-xs px-3 py-1 rounded-lg shadow-lg transition-all duration-700 ease-in-out">
+              GitHub Profile
+            </span>
           </a>
+
+          {/* LinkedIn */}
           <a
             href="#"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
+            className="relative group flex flex-col items-center text-stone-400 transition"
           >
-            <FaLinkedin />
+            <span className="absolute -inset-2 rounded-full bg-blue-600 scale-0 group-hover:scale-125 group-hover:opacity-80 transition-all duration-700"></span>
+            <FaLinkedin className="relative z-10 text-2xl transition-transform duration-700 group-hover:scale-110 group-hover:rotate-360 text-stone-300" />
+            {/* Tooltip text (left side) */}
+            <span className="absolute left-[150px] opacity-0 group-hover:left-[-130px] group-hover:opacity-100 bg-blue-700 text-white text-xs px-3 py-1 rounded-lg shadow-lg transition-all duration-700 ease-in-out">
+              Disable Profile
+            </span>
           </a>
+
+          {/* Facebook */}
           <a
             href="https://www.facebook.com/mdnazmul.hasanshuvo.5"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Facebook"
+            className="relative group flex flex-col items-center text-stone-400 transition"
           >
-            <FaFacebook />
+            <span className="absolute -inset-2 rounded-full bg-blue-500 scale-0 group-hover:scale-125 group-hover:opacity-80 transition-all duration-700"></span>
+            <FaFacebook className="relative z-10 text-2xl transition-transform duration-700 group-hover:scale-110 group-hover:rotate-360 text-stone-300" />
+            {/* Tooltip text (left side) */}
+            <span className="absolute left-[150px] opacity-0 group-hover:left-[-140px] group-hover:opacity-100 bg-blue-600 text-stone-200 text-xs px-3 py-1 rounded-lg shadow-lg transition-all duration-700 ease-in-out">
+              Facebook Profile
+            </span>
           </a>
+
+          {/* Twitter */}
           <a
             href="https://x.com/SHUVO_1010"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Twitter"
+            className="relative group flex flex-col items-center text-stone-400 transition"
           >
-            <FaTwitter />
+            <span className="absolute -inset-2 rounded-full bg-sky-500 scale-0 group-hover:scale-125 group-hover:opacity-80 transition-all duration-700"></span>
+            <FaTwitter className="relative z-10 text-2xl transition-transform duration-700 group-hover:scale-110 group-hover:rotate-360 text-stone-300" />
+            {/* Tooltip text (left side) */}
+            <span className="absolute left-[150px] opacity-0 group-hover:left-[-130px] group-hover:opacity-100 bg-sky-600 text-stone-200 text-xs px-3 py-1 rounded-lg shadow-lg transition-all duration-700 ease-in-out">
+              Twitter Profile
+            </span>
           </a>
+
+          {/* Instagram */}
           <a
             href="https://www.instagram.com/nazmul_hasan_shuvooo/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
+            className="relative group flex flex-col items-center text-stone-400 transition"
           >
-            <FaInstagram />
+            <span className="absolute -inset-2 rounded-full bg-pink-500 scale-0 group-hover:scale-125 group-hover:opacity-80 transition-all duration-700"></span>
+            <FaInstagram className="relative z-10 text-2xl transition-transform duration-700 group-hover:scale-110 group-hover:rotate-360 text-stone-300" />
+            {/* Tooltip text (left side) */}
+            <span className="absolute left-[150px] opacity-0 group-hover:left-[-140px] group-hover:opacity-100 bg-pink-600 text-stone-200 text-xs px-3 py-1 rounded-lg shadow-lg transition-all duration-700 ease-in-out">
+              Instagram Profile
+            </span>
           </a>
+
           {/* Vertical Line */}
           <div className="h-28 w-[1px] bg-stone-400"></div>
 
           {/* Scroll Down Icon */}
           <a
             href="#contact"
-            className="flex items-center justify-center w-10 h-10 rounded-full border-2 border-lime-600 text-white"
+            className="relative group flex-col flex items-center justify-center w-10 h-10 rounded-full border-2 border-lime-600 hover:border-white ease-in-out duration-500 text-white"
+            onClick={(e) => {
+              // add animation class
+              e.currentTarget.classList.add("animate-shake");
+              // remove it after animation ends so it can trigger again
+              setTimeout(() => {
+                e.currentTarget.classList.remove("animate-shake");
+              }, 600);
+            }}
           >
+            <span className="absolute -inset-0.5 rounded-full bg-orange-400 blur-xl scale-0 group-hover:scale-125 group-hover:opacity-80 transition-all duration-500"></span>
             <FaChevronDown className="text-lg text-lime-400" />
           </a>
 
           {/* Scroll Up Icon */}
           <a
             href="#intro"
-            className="flex items-center justify-center w-8 h-8 rounded-full border-2 border-sky-400 text-white"
+            className="relative group flex-col flex items-center justify-center w-8 h-8 rounded-full border-2 border-sky-400 hover:border-white ease-in-out duration-500  text-white"
           >
-            <FaChevronUp className="text-sm text-sky-400" />
+            <span className="absolute -inset-0.5 rounded-full bg-sky-600 blur-lg scale-0 group-hover:scale-125 group-hover:opacity-80 transition-all duration-500"></span>
+            <FaChevronUp className="text-sm text-sky-400 " />
           </a>
         </motion.div>
 
@@ -225,8 +279,7 @@ const Hero = () => {
               {/* Get in touch */}
               <motion.a
                 variants={containerVariants}
-                href="#"
-                target="_blank"
+                href="#contact"
                 rel="noopener noreferrer"
                 className="border border-stone-300 flex items-center text-center p-4 text-sm md:text-base lg:text-lg text-stone-300 mb-10"
               >
