@@ -7,7 +7,7 @@ const Contact = () => {
       id="contact"
       className="bg-[#1a1a1a] text-stone-400 px-8 py-40 mt-10 md:mt-20 lg:mt-32 md:px-14 lg:px-24"
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-[1400px] mx-auto">
         {/* Heading + big section number */}
         <motion.div
           whileInView={{ opacity: 1, y: 0 }}
@@ -21,7 +21,7 @@ const Contact = () => {
         </motion.div>
 
         {/* === 3 Column Content (Description / Follow / Contact) === */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 mt-12 ">
+        <div className="grid grid-cols-1 lg:grid-cols-12 md:gap-20 gap-6 mt-12 ">
           {/* Description */}
           <motion.div
             whileInView={{ opacity: 1, x: 0 }}
@@ -33,7 +33,7 @@ const Contact = () => {
               className="text-stone-400
              leading-relaxed max-w-2xl text-xl"
             >
-              As a Front-End Developer, I’m committed to writing efficient,
+              As a Front-End Developer, I'm committed to writing efficient,
               scalable, and visually appealing code. I believe in learning by
               doing, which drives me to constantly experiment, improve, and stay
               updated with the latest trends in web development.

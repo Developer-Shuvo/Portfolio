@@ -245,7 +245,7 @@ const Hero = () => {
               variants={childVariants}
               className="name pb-2 text-4xl tracking-tighter lg:text-6xl font-semibold"
             >
-              <span className="text-2xl">This is</span> SHUVO
+              SHUVO
             </motion.h1>
             <motion.span
               variants={childVariants}
@@ -263,25 +263,30 @@ const Hero = () => {
               Tailwind CSS, and other cutting-edge web technologies.
             </motion.p>
             <div className="flex flex-col md:flex-row items-center gap-0 sm:gap-0 md:gap-4 lg:gap-8">
-              {/* CV */}
+              {/*---------------- CV Button---------------- */}
               <motion.a
                 variants={childVariants}
                 href="https://drive.google.com/file/d/18OKI4hFKohKrQsPcdgVrHPctd0Qr4DSL/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 download
-                className="border border-stone-300 flex items-center text-center p-4 text-sm md:text-base lg:text-lg text-stone-300 mb-10"
+                className="border border-stone-400 flex items-center text-center p-4 
+                text-sm md:text-base lg:text-lg text-stone-300 mb-10"
               >
                 {" "}
                 GET MY CV{" "}
               </motion.a>
 
-              {/* Get in touch */}
+              {/*----------------- Get in touch Button---------------- */}
               <motion.a
+                whileHover={{ scale: 1.2, rotateX: 360, rotateY: 1 }}
+                whileTap={{ scale: 1, rotateX: 1, rotateY: -1 }}
                 variants={containerVariants}
                 href="#contact"
                 rel="noopener noreferrer"
-                className="border border-stone-300 flex items-center text-center p-4 text-sm md:text-base lg:text-lg text-stone-300 mb-10"
+                className="border border-stone-400 flex items-center text-center p-4
+                text-sm md:text-base lg:text-lg text-stone-300 mb-10 hover:border-purple-900
+                  hover:shadow-purple-900 shadow-lg ease-in-out duration-300"
               >
                 GET IN TOUCH
               </motion.a>

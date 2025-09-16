@@ -22,10 +22,7 @@ const AnimationSlider = () => {
 
         {/* Image 2 */}
         <div className="item" style={{ "--position": 2 }}>
-          <a
-            target="_blank"
-            href="https://technology-zone-by-shuvooo.netlify.app/"
-          >
+          <a target="_blank" href="https://technology-zone-shuvo.netlify.app/">
             <img src={image2} alt="" />
           </a>
         </div>
@@ -60,14 +57,17 @@ const AnimationSlider = () => {
         </div>
         {/* image 6 */}
         <div className="item" style={{ "--position": 6 }}>
-          <a target="_blank" href="#">
+          <a target="_blank" href="https://technology-zone-shuvo.netlify.app/">
             <img src={image6} alt="" />
           </a>
         </div>
 
         {/* image 7 */}
         <div className="item" style={{ "--position": 7 }}>
-          <a target="_blank" href="#">
+          <a
+            target="_blank"
+            href="https://next-js-nex-gen-innovators.vercel.app/"
+          >
             <img src={image7} alt="" />
           </a>
         </div>
@@ -84,13 +84,16 @@ const AnimationSlider = () => {
 
         {/* image 9 */}
         <div className="item" style={{ "--position": 9 }}>
-          <a target="_blank" href="#">
+          <a
+            target="_blank"
+            href="https://mobile-banking-by-shuvo.netlify.app/"
+          >
             <img src={image9} alt="" />
           </a>
         </div>
         {/* image 10 */}
         <div className="item" style={{ "--position": 10 }}>
-          <a target="_blank" href="#">
+          <a target="_blank" href="https://technology-zone-shuvo.netlify.app/">
             <img src={image4} alt="" />
           </a>
         </div>

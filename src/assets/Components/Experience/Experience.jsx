@@ -19,8 +19,8 @@ const Experience = () => {
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 0.6 }}
         className="mb-16 text-center text-3xl md:text-4xl lg:text-5xl 
-        font-extrabold tracking-wide bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-700 
-        text-transparent bg-clip-text"
+        font-extrabold tracking-wide  
+      "
       >
         Experience
       </motion.h1>
