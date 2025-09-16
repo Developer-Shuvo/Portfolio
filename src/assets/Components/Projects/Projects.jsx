@@ -18,7 +18,7 @@ const Projects = () => {
         {PROJECTS.map(
           (
             project,
-            index // Renamed 'Projects' to 'project' for clarity
+            index 
           ) => (
             // Full Card Body it is
             <motion.a

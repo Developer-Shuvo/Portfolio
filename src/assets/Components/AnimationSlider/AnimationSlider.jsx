@@ -5,12 +5,12 @@ import image4 from "./mobile-banking.png";
 import image5 from "./image5.jpg";
 import image6 from "./image6.jpg";
 import image7 from "./image7.jpg";
-import image8 from "./image8.jpg";
+import image8 from "./nexgen-innovators.png";
 import image9 from "./image9.jpg";
 
 const AnimationSlider = () => {
   return (
-    <div id="myWork" className="lg:py-20 sm:mt-10 md:mt-20 lg:mt-0 banner">
+    <div id="myWork" className=" mt-6 md:mt-10 banner">
       {/* Slider Section */}
       <div className="slider" style={{ "--quantity": 10 }}>
         <div className="item" style={{ "--position": 1 }}>
@@ -30,6 +30,7 @@ const AnimationSlider = () => {
           </a>
         </div>
         {/* Image 3 */}
+        {/* Books world */}
         <div className="item" style={{ "--position": 3 }}>
           <a target="_blank" href="https://book-workd-by-shuvo.netlify.app/">
             <img src={image3} alt="" />
@@ -37,41 +38,59 @@ const AnimationSlider = () => {
         </div>
 
         {/* image 4 */}
+        {/* Mobile banking */}
         <div className="item" style={{ "--position": 4 }}>
           <a
             target="_blank"
-            href="https://mobile-banking-by-shuvo.netlify.app/index.html"
+            href="https://mobile-banking-by-shuvo.netlify.app/"
           >
             <img src={image4} alt="" />
           </a>
         </div>
+
+        {/* image 5 */}
+        {/* Technology Zone */}
         <div className="item" style={{ "--position": 5 }}>
-          <a href="https://ecommerce-by-shuvo.netlify.app/">
+          <a
+            target="_blank"
+            href="https://next-js-nex-gen-innovators.vercel.app/"
+          >
             <img src={image5} alt="" />
           </a>
         </div>
+        {/* image 6 */}
         <div className="item" style={{ "--position": 6 }}>
-          <a href="#">
+          <a target="_blank" href="#">
             <img src={image6} alt="" />
           </a>
         </div>
+
+        {/* image 7 */}
         <div className="item" style={{ "--position": 7 }}>
-          <a href="#">
+          <a target="_blank" href="#">
             <img src={image7} alt="" />
           </a>
         </div>
+        {/* image 8 */}
+        {/* Nexgen Innovators */}
         <div className="item" style={{ "--position": 8 }}>
-          <a href="#">
+          <a
+            target="_blank"
+            href="https://next-js-nex-gen-innovators.vercel.app/"
+          >
             <img src={image8} alt="" />
           </a>
         </div>
+
+        {/* image 9 */}
         <div className="item" style={{ "--position": 9 }}>
-          <a href="#">
+          <a target="_blank" href="#">
             <img src={image9} alt="" />
           </a>
         </div>
+        {/* image 10 */}
         <div className="item" style={{ "--position": 10 }}>
-          <a href="#">
+          <a target="_blank" href="#">
             <img src={image4} alt="" />
           </a>
         </div>

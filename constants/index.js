@@ -1,7 +1,8 @@
 import project1 from "../assets/projects/Technology-zone.png";
-import project2 from "../assets/projects/clock.png";
-import project3 from "../assets/projects/books-world.png";
-import project4 from "../assets/projects/mobile-banking.png";
+import project2 from "../assets/projects/nexgen-innovators.png";
+import project3 from "../assets/projects/clock.png";
+import project4 from "../assets/projects/books-world.png";
+import project5 from "../assets/projects/mobile-banking.png";
 
 export const HERO_CONTENT = `I am a passionate full stack developer with a knack for crafting robust and scalable web applications. With 5 years of hands-on experience, I have honed my skills in front-end technologies like React and Next.js, as well as back-end technologies like Node.js, MySQL, PostgreSQL, and MongoDB. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
 
@@ -49,13 +50,21 @@ export const PROJECTS = [
     link: "https://technology-zone-by-shuvooo.netlify.app/",
     image: project1,
     description:
-      "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
-    technologies: ["HTML", "CSS", "React", "TailWind", "JavaScript"],
+      "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication. privacy policy, refund policy, shop location, outlet all information here in one site. This. totally dynamical e commerce site  ",
+    technologies: ["HTML", "CSS", "React", "Tailwind CSS", "JavaScript"],
+  },
+  {
+    title: "Innovators Company",
+    link: "https://next-js-nex-gen-innovators.vercel.app/",
+    image: project2,
+    description:
+      "Nice & Attractive looking with full pixel perfect responsive innovators company landing page. This site made by using Next.js. This was Customer choice site",
+    technologies: ["HTML", "CSS", "Next.js", "Tailwind CSS", "JavaScript"],
   },
   {
     title: "Dynamic Clock",
     link: "https://special-clock.netlify.app/",
-    image: project2,
+    image: project3,
     description:
       "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
     technologies: ["HTML", "CSS", "TailWind", "JavaScript"],
@@ -63,7 +72,7 @@ export const PROJECTS = [
   {
     title: "Read Book",
     link: "https://book-workd-by-shuvo.netlify.app/",
-    image: project3,
+    image: project4,
     description:
       "A personal portfolio website showcasing projects, skills, and contact information.",
     technologies: ["HTML", "CSS", "React", "Bootstrap"],
@@ -71,9 +80,9 @@ export const PROJECTS = [
   {
     title: "Mobile Banking App",
     link: "https://mobile-banking-by-shuvo.netlify.app/index.html",
-    image: project4,
+    image: project5,
     description:
-      "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
+      "This is a Basic of mobile banking system. Here we can Add money, cash out, Transfer money, Get bonus, Pay bill etc.. At first you have do provide a number/pin and next time that is working, either wrong message showing.",
     technologies: ["HTML", "CSS", "Vue.js", "Express", "mySQL"],
   },
 ];

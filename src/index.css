@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Asimovian&display=swap');
 
 :root {
-  font-family: "Inter","Asimovian", "sans-serif";
+  font-family: "Inter", "sans-serif";
   background: #000000;
 }
 
@@ -84,7 +84,7 @@ html {
 
 /* My Work Text */
 .banner .content h1 {
-  font-family: 'Asimovian';
+  font-family: "Inter";
   font-size: 5rem;
   line-height: 1.2;
   color: rgba(101, 6, 120, 0.687);
@@ -261,7 +261,7 @@ html {
 /* ✅ Large Devices (Laptops & Desktops) → KEEP SAME SIZE */
 @media (min-width: 1024px) and (max-width: 1440px) {
   .banner {
-    height: 70vh;
+    height: 50vh;
     padding: 10px;
   }
 

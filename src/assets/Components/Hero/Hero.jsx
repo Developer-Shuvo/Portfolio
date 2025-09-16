@@ -103,7 +103,7 @@ const childVariants = {
 
 const Hero = () => {
   return (
-    <div id="intro" className=" pt-20 lg:mb-36 relative">
+    <div id="intro" className=" pt-20  relative">
       <div className="flex flex-wrap lg:flex-row-reverse">
         {/*_______ Profile Image with Tilt Effect _______ */}
         <div className="w-full lg:w-1/2 flex justify-center lg:p-8">
@@ -245,7 +245,7 @@ const Hero = () => {
               variants={childVariants}
               className="name pb-2 text-4xl tracking-tighter lg:text-6xl font-semibold"
             >
-              SHUVO
+              <span className="text-2xl">This is</span> SHUVO
             </motion.h1>
             <motion.span
               variants={childVariants}

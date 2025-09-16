@@ -33,10 +33,11 @@ const Contact = () => {
               className="text-stone-400
              leading-relaxed max-w-2xl text-xl"
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
-              illum quasi facere libero, fugiat laboriosam possimus amet
-              consectetur adipisicing elit reprehenderit eveniet tempore
-              quisquam ipsa id esse. Facere ratione dignissimos.
+              As a Front-End Developer, I’m committed to writing efficient,
+              scalable, and visually appealing code. I believe in learning by
+              doing, which drives me to constantly experiment, improve, and stay
+              updated with the latest trends in web development.
+              Let's connect and create something great together!
             </p>
           </motion.div>
 
