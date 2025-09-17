@@ -47,7 +47,7 @@ export const EXPERIENCES = [
 export const PROJECTS = [
   {
     title: "E-Commerce Website",
-    link: "https://technology-zone-by-shuvooo.netlify.app/",
+    link: "https://technology-zone-shuvoo.netlify.app/",
     image: project1,
     description:
       "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication. privacy policy, refund policy, shop location, outlet all information here in one site. This. totally dynamical e commerce site  ",
@@ -63,10 +63,10 @@ export const PROJECTS = [
   },
   {
     title: "Dynamic Clock",
-    link: "https://special-clock.netlify.app/",
+    link: "https://dynamic-clock-by-shuvo.netlify.app/",
     image: project3,
     description:
-      "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
+      "This is a dynamic clock, made by using HTML, CSS, JavaScript, Animation. This clock build my design idea.",
     technologies: ["HTML", "CSS", "TailWind", "JavaScript"],
   },
   {

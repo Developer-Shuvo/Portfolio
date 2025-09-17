@@ -93,7 +93,10 @@ const AnimationSlider = () => {
         </div>
         {/* image 10 */}
         <div className="item" style={{ "--position": 10 }}>
-          <a target="_blank" href="https://technology-zone-shuvo.netlify.app/">
+          <a
+            target="_blank"
+            href="https://mobile-banking-by-shuvo.netlify.app/"
+          >
             <img src={image4} alt="" />
           </a>
         </div>
