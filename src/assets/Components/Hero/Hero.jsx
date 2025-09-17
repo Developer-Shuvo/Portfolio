@@ -265,30 +265,90 @@ const Hero = () => {
             <div className="flex flex-col md:flex-row items-center gap-0 sm:gap-0 md:gap-4 lg:gap-8">
               {/*---------------- CV Button---------------- */}
               <motion.a
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ type: "spring", stiffness: 200, damping: 20 }}
                 variants={childVariants}
                 href="https://drive.google.com/file/d/18OKI4hFKohKrQsPcdgVrHPctd0Qr4DSL/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 download
                 className="border border-stone-400 flex items-center text-center p-4 
-                text-sm md:text-base lg:text-lg text-stone-300 mb-10"
+                text-sm md:text-base lg:text-lg text-stone-300 mb-10 mt-10"
               >
                 {" "}
                 GET MY CV{" "}
               </motion.a>
 
               {/*----------------- Get in touch Button---------------- */}
-              <motion.a
-                whileHover={{ scale: 1.2, rotateX: 360, rotateY: 1 }}
-                whileTap={{ scale: 1, rotateX: 1, rotateY: -1 }}
-                variants={containerVariants}
-                href="#contact"
-                rel="noopener noreferrer"
-                className="border border-stone-400 flex items-center text-center p-4
-                text-sm md:text-base lg:text-lg text-stone-300 mb-10 hover:border-purple-900
-                  hover:shadow-purple-900 shadow-lg ease-in-out duration-300"
-              >
-                GET IN TOUCH
+              <motion.a href="#contact">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ type: "spring", stiffness: 200, damping: 20 }}
+                  className="
+                  relative inline-flex items-center justify-center
+                  px-4 py-3 text-lg font-bold text-stone-300 hover:text-yellow-400
+                  cursor-pointer
+                  border border-[#4f4e4e] hover:bg-black
+                  shadow-[0_2px_4px_rgba(0,0,0,1),0_10px_20px_rgba(0,0,0,0.4)]
+                  
+                  transition-all duration-500 ease-in-out
+                  active:translate-y-[4px]
+                  active:shadow-[0_1px_2px_rgba(0,0,0,1),0_5px_10px_rgba(0,0,0,0.4)]
+    "
+                >
+                  Get in Touch
+                  <motion.div
+                    whileHover={{ rotate: 45 }}
+                    transition={{ duration: 0.1, ease: "easeInOut" }}
+                    className="
+                    relative flex items-center justify-center ml-3
+                    w-10 h-10 rounded-full
+                    
+                    border border-cyan-800
+                    hover:border-lime-500
+                    shadow-[0_0_1px_rgba(0,0,0,1)]
+                    transition-all duration-500 ease-in-out
+      "
+                  >
+                    <svg
+                      id="Arrow"
+                      viewBox="0 0 32 32"
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="30px"
+                      width="30px"
+                      className="
+          transition-all duration-500 ease-in-out
+          drop-shadow-[0_10px_20px_rgba(26,25,25,0.9)]
+          hover:drop-shadow-[0_10px_20px_rgba(50,50,50,1),0_0_20px_rgba(2,2,2,1)]
+        "
+                    >
+                      <defs>
+                        <linearGradient
+                          y2="100%"
+                          x2="100%"
+                          y1="0%"
+                          x1="0%"
+                          id="iconGradient"
+                        >
+                          <stop
+                            style={{ stopColor: "#FFFFFF", stopOpacity: 1 }}
+                            offset="0%"
+                          />
+                          <stop
+                            style={{ stopColor: "#AAAAAA", stopOpacity: 1 }}
+                            offset="100%"
+                          />
+                        </linearGradient>
+                      </defs>
+                      <path
+                        fill="url(#iconGradient)"
+                        d="M4 15a1 1 0 0 0 1 1h19.586l-4.292 4.292a1 1 0 0 0 1.414 1.414l6-6a.99.99 0 0 0 .292-.702V15c0-.13-.026-.26-.078-.382a.99.99 0 0 0-.216-.324l-6-6a1 1 0 0 0-1.414 1.414L24.586 14H5a1 1 0 0 0-1 1z"
+                      />
+                    </svg>
+                  </motion.div>
+                </motion.button>
               </motion.a>
             </div>
           </motion.div>
